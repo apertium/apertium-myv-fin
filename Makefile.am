@@ -16,7 +16,7 @@ TARGETS_COMMON = $(PREFIX1).autobil.bin $(PREFIX2).autobil.bin \
         $(PREFIX1).t2x.bin $(PREFIX1).t3x.bin \
         $(PREFIX2).t2x.bin $(PREFIX2).t3x.bin \
         $(PREFIX1).rlx.bin $(PREFIX2).rlx.bin \
-        $(PREFIX1).lrx.bin $(PREFIX2).lrx.bin \
+        $(PREFIX1).autolex.bin $(PREFIX2).autolex.bin \
 	$(PREFIX1).mode $(PREFIX2).mode modes 
 
 ###############################################################################
@@ -130,11 +130,11 @@ $(PREFIX2).rlx.bin: $(BASENAME).$(PREFIX2).rlx
 ## Lexical selection rules
 ###############################################################################
 
-$(PREFIX1).lrx.bin: $(BASENAME).$(PREFIX1).lrx
-	apertium-lrx-comp lr $< $@
+$(PREFIX1).autolex.bin: $(BASENAME).$(PREFIX1).lrx
+	lrx-comp $< $@
 
-$(PREFIX2).lrx.bin: $(BASENAME).$(PREFIX2).lrx
-	apertium-lrx-comp lr $< $@
+$(PREFIX2).autolex.bin: $(BASENAME).$(PREFIX2).lrx
+	lrx-comp $< $@
 
 ###############################################################################
 ## Structural transfer rules
@@ -213,7 +213,7 @@ apertium_myv_fin_DATA=$(PREFIX1).autobil.bin $(PREFIX2).autobil.bin \
 		    $(PREFIX1).t2x.bin $(PREFIX2).t2x.bin \
 		    $(PREFIX1).t3x.bin $(PREFIX2).t3x.bin \
 		    $(PREFIX1).rlx.bin $(PREFIX2).rlx.bin \
-		    $(PREFIX1).lrx.bin $(PREFIX2).lrx.bin \
+		    $(PREFIX1).autolex.bin $(PREFIX2).autolex.bin \
 		    $(BASENAME).$(PREFIX1).t1x $(BASENAME).$(PREFIX2).t1x \
 		    modes.xml
 

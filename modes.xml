@@ -82,7 +82,7 @@
       <program name="hfst-proc -w">
         <file name="myv-fin.automorf.hfst"/>
       </program>
-      <program name="cg-conv -a">
+      <program name="cg-conv -a"/>
       <program name="vislcg3 --trace --grammar">
         <file name="myv-fin.rlx.bin"/>
       </program>
@@ -313,7 +313,7 @@
       <program name="hfst-proc -w">
         <file name="fin-myv.automorf.hfst"/>
       </program>
-      <program name="cg-conv -a">
+      <program name="cg-conv -a"/>
       <program name="vislcg3 --trace --grammar">
         <file name="fin-myv.rlx.bin"/>
       </program>
