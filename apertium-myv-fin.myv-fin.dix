@@ -6,8 +6,8 @@
   <section id="main" type="standard">
     <!-- Раздел: Имя Существительное -->
 
-    <e><p><l>пине<s n="n"/></l><r>koira<s n="n"/></r></p></e>
     <e><p><l>киска<s n="n"/></l><r>koira<s n="n"/></r></p></e>
+    <e><p><l>пине<s n="n"/></l><r>koira<s n="n"/></r></p></e>
 
   </section>
 </dictionary>
