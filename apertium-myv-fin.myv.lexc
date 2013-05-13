@@ -4,13 +4,223 @@ Multichar_Symbols
 %<n%>   ! Имя существительное · Noun
 
 LEXICON Root
-
+Adjectives ;
+Adverbs ;
+Conjunctions ;
 Nouns ; 
+Postpositions ;
+Pronouns ;
+Verbs ;
 
-LEXICON N1
+LEXICON Adjectives
+ашине A_ВЕЛЕ ;
+вишкине A_ВЕЛЕ ;
+мазый:мазы A_СЕДЕЙ ;
+маней:мане A_СЕДЕЙ ;
+пшти A_ВЕЛЕ ;
+тюжа A_КУДО ;
+тюжине A_ВЕЛЕ ;
+човине A_ВЕЛЕ ;
+эчке:эчк A_ТИНГЕ ;
 
-%<n%>: # ;
+LEXICON A_КУДО
+%<a%>: # ;
+%<a%>%<subst%>%<sg%>%<nom%>: # ;
+%<a%>%<subst%>%<pl%>%<nom%>:ть # ;
+
+LEXICON A_ВЕЛЕ
+%<a%>: # ;
+%<a%>%<subst%>%<sg%>%<nom%>: # ;
+%<a%>%<subst%>%<pl%>%<nom%>:ть # ;
+
+LEXICON A_СЕДЕЙ
+%<a%>:й # ;
+%<a%>%<subst%>%<sg%>%<nom%>:й # ;
+%<a%>%<subst%>%<pl%>%<nom%>:йть # ;
+
+LEXICON A_ТИНГЕ
+%<a%>:е # ;
+%<a%>%<subst%>%<sg%>%<nom%>:е # ;
+%<a%>%<subst%>%<pl%>%<nom%>:ть # ;
+%<a%>%<subst%>%<pl%>%<nom%>:еть # ;
+
+LEXICON Adverbs
+тозонь ADV-ILL ;
+
+LEXICON ADV-ILL
+%<adv%>%<ill%>: # ;
+
+LEXICON Conjunctions
+ды CC_ ;
+
+
+LEXICON CC_
+%<cc%>: # ;
 
 LEXICON Nouns
 
-киска N1 ; ! ""
+ава N_КУДО ;
+ватракш N_ОШ ;
+вирь:вир N_ВИРЬ ;
+кенжине N_ВЕЛЕ ;
+ки N_ВЕЛЕ ;
+кизэ N_ВЕЛЕ ;
+киска N_КУДО ; ! ""
+кудо N_КУДО ;
+латкине N_ВЕЛЕ ;
+левкс N_ЛЕВКС ;
+менель:менел N_КЕЛЬ ;
+мода N_КУДО ;
+пакся N_КУДО ;
+пене N_ВЕЛЕ ;
+пизэ N_ВЕЛЕ ;
+пилине N_ВЕЛЕ ;
+пильгине N_ВЕЛЕ ;
+пуло N_КУДО ;
+пулыне N_ВЕЛЕ ;
+ривезь:ривез N_РИВЕЗЬ ;
+ривезьке N_ВЕЛЕ ;
+судыне N_ВЕЛЕ ;
+турвине N_ВЕЛЕ ;
+укштор N_КОВ ;
+ундо:унд N_УНДО ;
+чи N_ВЕЛЕ ;
+эриця N_КУДО ;
+
+
+LEXICON N_КОВ
+%<n%>%<ela%>%<indef%>:сто # ;
+%<n%>%<gen%>%<indef%>:онь # ;
+%<n%>%<ill%>%<indef%>:ос # ;
+%<n%>%<sg%>%<nom%>%<indef%>: # ;
+
+LEXICON N_КУДО
+%<n%>%<ela%>%<indef%>:сто # ;
+%<n%>%<gen%>%<indef%>:нь # ;
+%<n%>%<ill%>%<indef%>:с # ;
+%<n%>%<sg%>%<nom%>%<indef%>: # ;
+
+LEXICON N_УНДО
+%<n%>%<ela%>%<indef%>:сто # ;
+%<n%>%<ela%>%<indef%>:осто # ;
+%<n%>%<gen%>%<indef%>:онь # ;
+%<n%>%<ill%>%<indef%>:с # ;
+%<n%>%<ill%>%<indef%>:ос # ;
+%<n%>%<sg%>%<nom%>%<indef%>:о # ;
+
+LEXICON N_ОШ
+%<n%>%<ela%>%<indef%>:сто # ;
+%<n%>%<ela%>%<indef%>:осто # ;
+%<n%>%<gen%>%<indef%>:онь # ;
+%<n%>%<ill%>%<indef%>:с # ;
+%<n%>%<ill%>%<indef%>:ос # ;
+%<n%>%<sg%>%<nom%>%<indef%>: # ;
+
+LEXICON N_СЕДЕЙ
+%<n%>%<ela%>%<indef%>:йстэ # ;
+%<n%>%<gen%>%<indef%>:ень # ;
+%<n%>%<ill%>%<indef%>:йс # ;
+%<n%>%<sg%>%<nom%>%<indef%>:й # ;
+%<n%>%<sg%>%<nom%>%<def%>:есь # ;
+
+LEXICON N_РИВЕЗЬ
+%<n%>%<ela%>%<indef%>:ьстэ # ;
+%<n%>%<gen%>%<indef%>:ень # ;
+%<n%>%<ill%>%<indef%>:ьс # ;
+%<n%>%<ill%>%<indef%>:ес # ;
+%<n%>%<sg%>%<nom%>%<indef%>:ь # ;
+%<n%>%<sg%>%<nom%>%<def%>:есь # ;
+
+LEXICON N_ВИРЬ
+%<n%>%<ela%>%<indef%>:ьстэ # ;
+%<n%>%<gen%>%<indef%>:ень # ;
+%<n%>%<ill%>%<indef%>:ьс # ;
+%<n%>%<sg%>%<nom%>%<indef%>:ь # ;
+%<n%>%<sg%>%<nom%>%<def%>:есь # ;
+
+LEXICON N_КЕЛЬ
+%<n%>%<ela%>%<indef%>:ьстэ # ;
+%<n%>%<gen%>%<indef%>:ень # ;
+%<n%>%<ill%>%<indef%>:ьс # ;
+%<n%>%<sg%>%<nom%>%<indef%>:ь # ;
+%<n%>%<sg%>%<nom%>%<def%>:есь # ;
+
+LEXICON N_ЛЕВКС
+%<n%>%<ela%>%<indef%>:стэ # ;
+%<n%>%<ela%>%<indef%>:эстэ # ;
+%<n%>%<gen%>%<indef%>:энь # ;
+%<n%>%<ill%>%<indef%>:с # ;
+%<n%>%<ill%>%<indef%>:эс # ;
+%<n%>%<sg%>%<nom%>%<indef%>: # ;
+%<n%>%<sg%>%<nom%>%<def%>:эсь # ;
+
+LEXICON N_КЕВ
+%<n%>%<ela%>%<indef%>:стэ # ;
+%<n%>%<gen%>%<indef%>:ень # ;
+%<n%>%<ill%>%<indef%>:с # ;
+%<n%>%<sg%>%<nom%>%<indef%>: # ;
+%<n%>%<sg%>%<nom%>%<def%>:есь # ;
+
+LEXICON N_КИТ
+%<n%>%<ela%>%<indef%>:стэ # ;
+%<n%>%<gen%>%<indef%>:энь # ;
+%<n%>%<ill%>%<indef%>:с # ;
+%<n%>%<sg%>%<nom%>%<indef%>: # ;
+%<n%>%<sg%>%<nom%>%<def%>:есь # ;
+
+LEXICON N_ВЕЛЕ
+%<n%>%<ela%>%<indef%>:стэ # ;
+%<n%>%<gen%>%<indef%>:нь # ;
+%<n%>%<ill%>%<indef%>:с # ;
+%<n%>%<sg%>%<nom%>%<indef%>: # ;
+%<n%>%<sg%>%<nom%>%<def%>:сь # ;
+
+LEXICON N_ТИНГЕ
+%<n%>%<ela%>%<indef%>:стэ # ;
+%<n%>%<ela%>%<indef%>:естэ # ;
+%<n%>%<gen%>%<indef%>:ень # ;
+%<n%>%<ill%>%<indef%>:с # ;
+%<n%>%<ill%>%<indef%>:ес # ;
+%<n%>%<sg%>%<nom%>%<indef%>:е # ;
+%<n%>%<sg%>%<nom%>%<def%>:есь # ;
+
+LEXICON N_КЕЖ
+%<n%>%<ela%>%<indef%>:стэ # ;
+%<n%>%<ela%>%<indef%>:естэ # ;
+%<n%>%<gen%>%<indef%>:ень # ;
+%<n%>%<ill%>%<indef%>:с # ;
+%<n%>%<ill%>%<indef%>:ес # ;
+%<n%>%<sg%>%<nom%>%<indef%>: # ;
+
+
+LEXICON Postpositions
+алдо PO-ABL ;
+
+LEXICON PO-ABL
+%<po%>%<abl%>: # ;
+
+
+LEXICON Pronouns
+эстензэ PRON-REFL-SG3-DAT ;
+
+LEXICON PRON-REFL-SG3-DAT
+%<pron%>%<refl%>%<sg3%>%<dat%>: # ;
+
+
+
+LEXICON Verbs
+
+муемс:му VT_МУЕМС ;
+теемс:те VT_ТЕЕМС ;
+чувомс:чув VT_ЧУВОМС ;
+
+LEXICON VT_МУЕМС
+%<v%>%<ind%>%<prt1%>%<scsg3%>:сь # ;
+
+LEXICON VT_ТЕЕМС
+%<v%>%<ind%>%<prt1%>%<scsg3%>:йсь # ;
+
+LEXICON VT_ЧУВОМС
+%<v%>%<ind%>%<prt1%>%<scsg3%>:сь # ;
+
+
