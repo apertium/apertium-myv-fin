@@ -1,13 +1,89 @@
 <dictionary>
   <alphabet/>
   <sdefs>
+    <sdef n="a"  c="Имя существительное"/>
+    <sdef n="adv"  c="Имя существительное"/>
+    <sdef n="cc"  c="Имя существительное"/>
+    <sdef n="depattr"  c="Имя существительное"/>
     <sdef n="n"  c="Имя существительное"/>
+    <sdef n="num"  c="Имя существительное"/>
+    <sdef n="po"  c="Имя существительное"/>
+    <sdef n="pron"  c="Имя существительное"/>
+    <sdef n="qnt"  c="Имя существительное"/>
+    <sdef n="refl"  c="Имя существительное"/>
+    <sdef n="v"  c="Имя существительное"/>
   </sdefs>
   <section id="main" type="standard">
     <!-- Раздел: Имя Существительное -->
 
+    <e><p><l>а<s n="cc"/></l><r>mutta<s n="cc"/></r></p></e>
+    <e><p><l>а<s n="cc"/></l><r>ja<s n="cc"/></r></p></e>
+    <e><p><l>алдо<s n="po"/></l><r>alta<s n="po"/></r></p></e>
+    <e><p><l>алов<s n="po"/></l><r>alle<s n="po"/></r></p></e>
+    <e><p><l>ваномс<s n="v"/></l><r>katsoa<s n="v"/></r></p></e>
+    <e><p><l>ватракш<s n="n"/></l><r>sammakko<s n="n"/></r></p></e>
+    <e><p><l>вете<s n="qnt"/><s n="num"/></l><r>viisi<s n="qnt"/><s n="num"/></r></p></e>
+    <e><p><l>вешнемс<s n="v"/></l><r>etsiä<s n="v"/></r></p></e>
+    <e><p><l>ды<s n="cc"/></l><r>ja<s n="cc"/></r></p></e>
+    <e><p><l>кармамс<s n="v"/></l><r>alkaa<s n="v"/></r></p></e>
+    <e><p><l>казне<s n="n"/></l><r>lahja<s n="n"/></r></p></e>
+    <e><p><l>катка<s n="n"/></l><r>kissa<s n="n"/></r></p></e>
+    <e><p><l>ки<s n="n"/></l><r>tie<s n="n"/></r></p></e>
+    <e><p><l>кизэ<s n="n"/></l><r>kesä<s n="n"/></r></p></e>
+    <e><p><l>килей<s n="n"/></l><r>koivu<s n="n"/></r></p></e>
     <e><p><l>киска<s n="n"/></l><r>koira<s n="n"/></r></p></e>
+    <e><p><l>ков<s n="n"/></l><r>kuu<s n="n"/></r></p></e>
+    <e><p><l>кувать<s n="adv"/></l><r>kauan<s n="adv"/></r></p></e>
+    <e><p><l>куватьс<s n="adv"/></l><r>kauan<s n="adv"/></r></p></e>
+    <e><p><l>кудо<s n="n"/></l><r>koti<s n="n"/></r></p></e>
+    <e><p><l>кудо<s n="n"/></l><r>talo<s n="n"/></r></p></e>
+    <e><p><l>куроксто<s n="adv"/></l><r>pian<s n="adv"/></r></p></e>
+    <e><p><l>латкине<s n="n"/></l><r>kuoppa<s n="n"/></r></p></e>
+    <e><p><l>левкс<s n="n"/></l><r>poikanen<s n="n"/></r></p></e>
+    <e><p><l>левкс<s n="n"/></l><r>pentu<s n="n"/></r></p></e>
+    <e><p><l>ловажа<s n="n"/></l><r>luu<s n="n"/></r></p></e>
+    <e><p><l>мадемс<s n="v"/></l><r>mennä makuulle<s n="v"/></r></p></e>
+    <e><p><l>менель<s n="n"/></l><r>taivas<s n="n"/></r></p></e>
+    <e><p><l>минь<s n="pron"/></l><r>me<s n="pron"/></r></p></e>
+    <e><p><l>мода<s n="n"/></l><r>maa<s n="n"/></r></p></e>
+    <e><p><l>мон<s n="pron"/></l><r>minä<s n="pron"/></r></p></e>
+    <e><p><l>муемс<s n="v"/></l><r>löytää<s n="v"/></r></p></e>
+    <e><p><l>ниле<s n="qnt"/><s n="num"/></l><r>neljä<s n="qnt"/><s n="num"/></r></p></e>
+    <e><p><l>овто<s n="n"/></l><r>karhu<s n="n"/></r></p></e>
     <e><p><l>пине<s n="n"/></l><r>koira<s n="n"/></r></p></e>
+    <e><p><l>пизэ<s n="n"/></l><r>pesä<s n="n"/></r></p></e>
+    <e><p><l>пой<s n="n"/></l><r>haapa<s n="n"/></r></p></e>
+    <e><p><l>появамс<s n="v"/></l><r>ilmetä<s n="v"/></r></p></e>
+    <e><p><l>появамс<s n="v"/></l><r>tulla näkyviin<s n="v"/></r></p></e>
+    <e><p><l>псака<s n="n"/></l><r>kissa<s n="n"/></r></p></e>
+    <e><p><l>ривезь<s n="n"/></l><r>kettu<s n="n"/></r></p></e>
+    <e><p><l>саемс<s n="v"/></l><r>ottaa<s n="v"/></r></p></e>
+    <e><p><l>салмукс<s n="n"/></l><r>neula<s n="n"/></r></p></e>
+    <e><p><l>салмукс<s n="n"/></l><r>neulanen<s n="n"/></r></p></e>
+    <e><p><l>салмукс<s n="n"/></l><r>piikki<s n="n"/></r></p></e>
+    <e><p><l>сон<s n="pron"/></l><r>hän<s n="pron"/></r></p></e>
+    <e><p><l>сон<s n="pron"/></l><r>se<s n="pron"/></r></p></e>
+    <e><p><l>сынь<s n="pron"/></l><r>he<s n="pron"/></r></p></e>
+    <e><p><l>теемс<s n="v"/></l><r>tehdä<s n="v"/></r></p></e>
+    <e><p><l>теште<s n="n"/></l><r>tähti<s n="n"/></r></p></e>
+    <e><p><l>тозонь<s n="adv"/></l><r>siihen<s n="adv"/></r></p></e>
+    <e><p><l>тон<s n="pron"/></l><r>sinä<s n="pron"/></r></p></e>
+    <e><p><l>тынь<s n="pron"/></l><r>te<s n="pron"/></r></p></e>
+    <e><p><l>удомс<s n="v"/></l><r>nukkua<s n="v"/></r></p></e>
+    <e><p><l>улемс<s n="v"/></l><r>olla<s n="v"/></r></p></e>
+    <e><p><l>ульнемс<s n="v"/></l><r>olla<s n="v"/></r></p></e>
+    <e><p><l>укштор<s n="n"/></l><r>vahtera<s n="n"/></r></p></e>
+    <e><p><l>ундо<s n="n"/></l><r>ontelo<s n="n"/></r></p></e>
+    <e><p><l>ундо<s n="n"/></l><r>kolo<s n="n"/></r></p></e>
+    <e><p><l>чеерне<s n="n"/></l><r>hiiri<s n="n"/></r></p></e>
+    <e><p><l>чувомс<s n="v"/></l><r>kaivaa<s n="v"/></r></p></e>
+    <e><p><l>чувто<s n="n"/></l><r>puu<s n="n"/></r></p></e>
+    <e><p><l>чи<s n="n"/></l><r>päivä<s n="n"/></r></p></e>
+    <e><p><l>шка<s n="n"/></l><r>aika<s n="n"/></r></p></e>
+    <e><p><l>эсь<s n="depattr"/></l><r>oma<s n="a"/></r></p></e>
+    <e><p><l>эсь<s n="pron"/><s n="refl"/></l><r>itse<s n="a"/></r></p></e>
+    <e><p><l>эчке<s n="a"/></l><r>paksu<s n="a"/></r></p></e>
+    <e><p><l>якамс<s n="v"/></l><r>kävellä<s n="v"/></r></p></e>
 
   </section>
 </dictionary>
