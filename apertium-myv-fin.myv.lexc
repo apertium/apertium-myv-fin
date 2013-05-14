@@ -1,7 +1,64 @@
 
 Multichar_Symbols
 
+Ь2
+А1 А2
+Ы2
+О1
+%^О2
+Е3
+Г1 Г2
+К1 К3
+Н1
+%^SLoss
+
+%<a%>   !
+%<adv%>   !
+%<cc%>   !
 %<n%>   ! Имя существительное · Noun
+%<pers%>   !
+%<po%>   !
+%<pron%>   !
+%<v%>   !
+
+%<pl%>   !
+%<sg%>   !
+%<def%>   !
+%<indef%>   !
+%<pxsg1%>   !
+%<pxsg2%>   !
+%<pxsg3%>   !
+%<pxpl1%>   !
+%<pxpl2%>   !
+%<pxpl3%>   !
+
+%<ela%>   !
+%<gen%>   !
+%<ill%>   !
+%<ine%>   !
+%<nom%>   !
+%<prl%>   !
+
+%<conj%>   !
+%<cond%>   !
+%<des%>   !
+%<ind%>   !
+%<imprt%>   !
+%<opt%>   !
+
+%<scsg1%>   !
+%<scsg2%>   !
+%<scsg3%>   !
+%<scpl1%>   !
+%<scpl2%>   !
+%<scpl3%>   !
+
+%<ocsg1%>   !
+%<ocsg2%>   !
+%<ocsg3%>   !
+%<ocpl1%>   !
+%<ocpl2%>   !
+%<ocpl3%>   !
 
 LEXICON Root
 Adjectives ;
@@ -60,124 +117,257 @@ LEXICON CC_
 LEXICON Nouns
 
 ава N_КУДО ;
+вайгельне N_ВЕЛЕ ;
+вайгель:вайгел N_КЕЛЬ ;
+валдо:валд N_УНДО ;
+ванды N_ВЕЛЕ ;
+варака N_КУДО ;
 ватракш N_ОШ ;
+ве N_ВЕЛЕ ;
+ведь:вед N_ВИРЬ ;
+верь:вер N_ВИРЬ ;
 вирь:вир N_ВИРЬ ;
+инже:инж N_ТИНГЕ ;
+казне N_ВЕЛЕ ;
+калнэ N_ВЕЛЕ ;
+кев N_КЕВ ;
+кель:кел N_КЕЛЬ ;
 кенжине N_ВЕЛЕ ;
 ки N_ВЕЛЕ ;
 кизэ N_ВЕЛЕ ;
+килей:киле N_СЕДЕЙ ;
 киска N_КУДО ; ! ""
+ков N_КОВ ;
 кудо N_КУДО ;
+куз N_КУЗ ;
+курго:кург N_УНДО ;
 латкине N_ВЕЛЕ ;
 левкс N_ЛЕВКС ;
+ловажа N_КУДО ;
+лов N_КОВ ;
+ловсо N_КУДО ;
+медь:мед N_ВИРЬ ;
+мекш N_МЕКШ ;
 менель:менел N_КЕЛЬ ;
 мода N_КУДО ;
+овто:овт N_УНДО ;
+ойме:ойм N_ТИНГЕ ;
+ой:о N_СЕДЕЙ ;
+олго:олг N_ПАНГО ;
 пакся N_КУДО ;
+парь:пар N_ВИРЬ ;
+пачалксе N_ВЕЛЕ ;
+пей:пе N_СЕДЕЙ ;
+пеке:пек N_ТИНГЕ ;
+пекше N_ВЕЛЕ ;
 пене N_ВЕЛЕ ;
+пизёлкс N_ПИЗЁЛКС ;
 пизэ N_ВЕЛЕ ;
 пилине N_ВЕЛЕ ;
+пильге:пильг N_ТИНГЕ ;
 пильгине N_ВЕЛЕ ;
+пой:по N_СЕДЕЙ ;
+пря N_КУДО ;
 пуло N_КУДО ;
 пулыне N_ВЕЛЕ ;
 ривезь:ривез N_РИВЕЗЬ ;
 ривезьке N_ВЕЛЕ ;
+салмукс N_ПИЗЁЛКС ;
+седей:седе N_СЕДЕЙ ;
+сеель:сеел N_КЕЛЬ ;
+сельме:сельм N_ТИНГЕ ;
+судо N_КУДО ;
 судыне N_ВЕЛЕ ;
+сур N_КУЗ ;
+сюлмо:сюлм N_ПАНГО ;
+сюлмине N_ВЕЛЕ ;
+тарад N_КУЗ ;
+теле N_ВЕЛЕ ;
+теште:тешт N_ТЕШТЕ ;
+тумо N_КУДО ;
 турвине N_ВЕЛЕ ;
-укштор N_КОВ ;
+укштор N_КУЗ ;
 ундо:унд N_УНДО ;
+урнэ N_ВЕЛЕ ;
+чеерне N_ВЕЛЕ ;
+чеерь:чеер N_ВИРЬ ;
 чи N_ВЕЛЕ ;
+чивалгома N_КУДО ;
+чивалдо:чивалд N_УНДО ;
+чувто:чувт N_УНДО ;
+шка N_КУДО ;
 эриця N_КУДО ;
+эрьке:эрьк N_ТИНГЕ ;
+ёжо N_КУДО ;
 
 
 LEXICON N_КОВ
-%<n%>%<ela%>%<indef%>:сто # ;
+ 	 N-ELA-INDEF_BACK ;
+ 	 N-INE-INDEF_BACK ;
 %<n%>%<gen%>%<indef%>:онь # ;
 %<n%>%<ill%>%<indef%>:ос # ;
 %<n%>%<sg%>%<nom%>%<indef%>: # ;
+%<n%>%<sg%>%<nom%>%<def%>:ось # ;
 
 LEXICON N_КУДО
-%<n%>%<ela%>%<indef%>:сто # ;
+ 	 N-ELA-INDEF_BACK ;
+ 	 N-INE-INDEF_BACK ;
 %<n%>%<gen%>%<indef%>:нь # ;
 %<n%>%<ill%>%<indef%>:с # ;
 %<n%>%<sg%>%<nom%>%<indef%>: # ;
+%<n%>%<sg%>%<nom%>%<def%>:сь # ;
 
-LEXICON N_УНДО
-%<n%>%<ela%>%<indef%>:сто # ;
-%<n%>%<ela%>%<indef%>:осто # ;
+LEXICON N_ПАНГО
+ 	 N-ELA-INDEF_BACK ;
+:о 	 N-ELA-INDEF_BACK ;
+ 	 N-INE-INDEF_BACK ;
+:о 	 N-INE-INDEF_BACK ;
 %<n%>%<gen%>%<indef%>:онь # ;
 %<n%>%<ill%>%<indef%>:с # ;
 %<n%>%<ill%>%<indef%>:ос # ;
 %<n%>%<sg%>%<nom%>%<indef%>:о # ;
+%<n%>%<sg%>%<nom%>%<def%>:О1сь # ;
 
-LEXICON N_ОШ
-%<n%>%<ela%>%<indef%>:сто # ;
-%<n%>%<ela%>%<indef%>:осто # ;
+LEXICON N_УНДО
+ 	 N-ELA-INDEF_BACK ;
+:о 	 N-ELA-INDEF_BACK ;
+ 	 N-INE-INDEF_BACK ;
+:о 	 N-INE-INDEF_BACK ;
+%<n%>%<gen%>%<indef%>:онь # ;
+%<n%>%<ill%>%<indef%>:с # ;
+%<n%>%<ill%>%<indef%>:ос # ;
+%<n%>%<sg%>%<nom%>%<indef%>:о # ;
+%<n%>%<sg%>%<nom%>%<def%>:О1сь # ;
+
+LEXICON N_КУЗ
+ 	 N-ELA-INDEF_BACK ;
+:о 	 N-ELA-INDEF_BACK ;
+ 	 N-INE-INDEF_BACK ;
+:о 	 N-INE-INDEF_BACK ;
 %<n%>%<gen%>%<indef%>:онь # ;
 %<n%>%<ill%>%<indef%>:с # ;
 %<n%>%<ill%>%<indef%>:ос # ;
 %<n%>%<sg%>%<nom%>%<indef%>: # ;
+%<n%>%<sg%>%<nom%>%<def%>:ось # ;
+
+LEXICON N_ПИЗЁЛКС
+ 	 N-ELA-INDEF_BACK ;
+:о 	 N-ELA-INDEF_BACK ;
+ 	 N-INE-INDEF_BACK ;
+:о 	 N-INE-INDEF_BACK ;
+%<n%>%<gen%>%<indef%>:онь # ;
+%<n%>%<ill%>%<indef%>:с # ;
+%<n%>%<ill%>%<indef%>:ос # ;
+%<n%>%<sg%>%<nom%>%<indef%>: # ;
+%<n%>%<sg%>%<nom%>%<def%>:ось # ;
+
+LEXICON N_ОШ
+ 	 N-ELA-INDEF_BACK ;
+:о 	 N-ELA-INDEF_BACK ;
+ 	 N-INE-INDEF_BACK ;
+:о 	 N-INE-INDEF_BACK ;
+%<n%>%<gen%>%<indef%>:онь # ;
+%<n%>%<ill%>%<indef%>:с # ;
+%<n%>%<ill%>%<indef%>:ос # ;
+%<n%>%<sg%>%<nom%>%<indef%>: # ;
+%<n%>%<sg%>%<nom%>%<def%>:ось # ;
 
 LEXICON N_СЕДЕЙ
-%<n%>%<ela%>%<indef%>:йстэ # ;
+:й 	 N-ELA-INDEF_FRONT ;
+:й 	 N-INE-INDEF_FRONT ;
 %<n%>%<gen%>%<indef%>:ень # ;
 %<n%>%<ill%>%<indef%>:йс # ;
 %<n%>%<sg%>%<nom%>%<indef%>:й # ;
 %<n%>%<sg%>%<nom%>%<def%>:есь # ;
 
 LEXICON N_РИВЕЗЬ
-%<n%>%<ela%>%<indef%>:ьстэ # ;
-%<n%>%<gen%>%<indef%>:ень # ;
+:ь 	 N-ELA-INDEF_FRONT ;
+:е 	 N-ELA-INDEF_FRONT ;
+:ь 	 N-INE-INDEF_FRONT ;
+:е 	 N-INE-INDEF_FRONT ;
 %<n%>%<ill%>%<indef%>:ьс # ;
 %<n%>%<ill%>%<indef%>:ес # ;
 %<n%>%<sg%>%<nom%>%<indef%>:ь # ;
-%<n%>%<sg%>%<nom%>%<def%>:есь # ;
+%<n%> NMN_КАЛ-SG-NOM-DEF ;
 
 LEXICON N_ВИРЬ
-%<n%>%<ela%>%<indef%>:ьстэ # ;
+:ь 	 N-ELA-INDEF_FRONT ;
+:ь 	 N-INE-INDEF_FRONT ;
 %<n%>%<gen%>%<indef%>:ень # ;
 %<n%>%<ill%>%<indef%>:ьс # ;
 %<n%>%<sg%>%<nom%>%<indef%>:ь # ;
 %<n%>%<sg%>%<nom%>%<def%>:есь # ;
 
 LEXICON N_КЕЛЬ
-%<n%>%<ela%>%<indef%>:ьстэ # ;
+:ь 	 N-ELA-INDEF_FRONT ;
+:ь 	 N-INE-INDEF_FRONT ;
 %<n%>%<gen%>%<indef%>:ень # ;
 %<n%>%<ill%>%<indef%>:ьс # ;
 %<n%>%<sg%>%<nom%>%<indef%>:ь # ;
 %<n%>%<sg%>%<nom%>%<def%>:есь # ;
 
 LEXICON N_ЛЕВКС
-%<n%>%<ela%>%<indef%>:стэ # ;
-%<n%>%<ela%>%<indef%>:эстэ # ;
+ 	 N-ELA-INDEF_FRONT ;
+:э 	 N-ELA-INDEF_FRONT ;
+ 	 N-INE-INDEF_FRONT ;
+:э 	 N-INE-INDEF_FRONT ;
 %<n%>%<gen%>%<indef%>:энь # ;
 %<n%>%<ill%>%<indef%>:с # ;
 %<n%>%<ill%>%<indef%>:эс # ;
 %<n%>%<sg%>%<nom%>%<indef%>: # ;
 %<n%>%<sg%>%<nom%>%<def%>:эсь # ;
 
+LEXICON N_МЕКШ
+ 	 N-ELA-INDEF_FRONT ;
+:е 	 N-ELA-INDEF_FRONT ;
+ 	 N-INE-INDEF_FRONT ;
+:е 	 N-INE-INDEF_FRONT ;
+%<n%>%<gen%>%<indef%>:ень # ;
+%<n%>%<ill%>%<indef%>:с # ;
+%<n%>%<ill%>%<indef%>:ес # ;
+%<n%>%<sg%>%<nom%>%<indef%>: # ;
+%<n%>%<sg%>%<nom%>%<def%>:есь # ;
+
 LEXICON N_КЕВ
-%<n%>%<ela%>%<indef%>:стэ # ;
+ 	 N-ELA-INDEF_FRONT ;
+ 	 N-INE-INDEF_FRONT ;
 %<n%>%<gen%>%<indef%>:ень # ;
 %<n%>%<ill%>%<indef%>:с # ;
 %<n%>%<sg%>%<nom%>%<indef%>: # ;
 %<n%>%<sg%>%<nom%>%<def%>:есь # ;
 
 LEXICON N_КИТ
-%<n%>%<ela%>%<indef%>:стэ # ;
+ 	 N-ELA-INDEF_FRONT ;
+ 	 N-INE-INDEF_FRONT ;
 %<n%>%<gen%>%<indef%>:энь # ;
 %<n%>%<ill%>%<indef%>:с # ;
 %<n%>%<sg%>%<nom%>%<indef%>: # ;
 %<n%>%<sg%>%<nom%>%<def%>:есь # ;
 
 LEXICON N_ВЕЛЕ
-%<n%>%<ela%>%<indef%>:стэ # ;
+ 	 N-ELA-INDEF_FRONT ;
+ 	 N-INE-INDEF_FRONT ;
 %<n%>%<gen%>%<indef%>:нь # ;
 %<n%>%<ill%>%<indef%>:с # ;
 %<n%>%<sg%>%<nom%>%<indef%>: # ;
 %<n%>%<sg%>%<nom%>%<def%>:сь # ;
 
+LEXICON N_ТЕШТЕ
+:ь 	 N-ELA-INDEF_FRONT ;
+:е 	 N-ELA-INDEF_FRONT ;
+:ь 	 N-INE-INDEF_FRONT ;
+:е 	 N-INE-INDEF_FRONT ;
+%<n%>%<gen%>%<indef%>:ень # ;
+%<n%>%<ill%>%<indef%>:ьс # ;
+%<n%>%<ill%>%<indef%>:ес # ;
+%<n%>%<sg%>%<nom%>%<indef%>:е # ;
+%<n%>%<sg%>%<nom%>%<def%>:есь # ;
+
 LEXICON N_ТИНГЕ
-%<n%>%<ela%>%<indef%>:стэ # ;
-%<n%>%<ela%>%<indef%>:естэ # ;
+ 	 N-ELA-INDEF_FRONT ;
+:е 	 N-ELA-INDEF_FRONT ;
+ 	 N-INE-INDEF_FRONT ;
+:е 	 N-INE-INDEF_FRONT ;
 %<n%>%<gen%>%<indef%>:ень # ;
 %<n%>%<ill%>%<indef%>:с # ;
 %<n%>%<ill%>%<indef%>:ес # ;
@@ -185,12 +375,41 @@ LEXICON N_ТИНГЕ
 %<n%>%<sg%>%<nom%>%<def%>:есь # ;
 
 LEXICON N_КЕЖ
-%<n%>%<ela%>%<indef%>:стэ # ;
-%<n%>%<ela%>%<indef%>:естэ # ;
+	 N-ELA-INDEF_FRONT ;
+:е 	 N-ELA-INDEF_FRONT ;
+ 	 N-INE-INDEF_FRONT ;
+:е 	 N-INE-INDEF_FRONT ;
 %<n%>%<gen%>%<indef%>:ень # ;
 %<n%>%<ill%>%<indef%>:с # ;
 %<n%>%<ill%>%<indef%>:ес # ;
 %<n%>%<sg%>%<nom%>%<indef%>: # ;
+%<n%>: NMN_КАЛ-SG-NOM-DEF ;
+
+LEXICON NMN-ELA-INDEF
+%<ela%>%<indef%>:стО1 # ;
+LEXICON N-ELA-INDEF_BACK
+%<n%>%<ela%>%<indef%>:сто # ;
+LEXICON N-ELA-INDEF_FRONT
+%<n%>%<ela%>%<indef%>:стэ # ;
+
+LEXICON NMN-INE-INDEF
+%<ine%>%<indef%>:сО1 # ;
+LEXICON N-INE-INDEF_BACK
+%<n%>%<ine%>%<indef%>:со # ;
+LEXICON N-INE-INDEF_FRONT
+%<n%>%<ine%>%<indef%>:сэ # ;
+
+LEXICON NMN_КАЛ-SG-NOM-DEF
+%<sg%>%<nom%>%<def%>:О1сь # ;
+
+
+LEXICON N-SG-NOM-PX
+%<n%>%<sg%>%<nom%>%<pxsg1%>:О1м # ;
+%<n%>%<sg%>%<nom%>%<pxsg3%>:О1т # ;
+%<n%>%<sg%>%<nom%>%<pxsg3%>:О1зО1 # ;
+%<n%>%<sg%>%<nom%>%<pxpl1%>:нО1к # ;
+%<n%>%<sg%>%<nom%>%<pxpl3%>:О1нк # ;
+%<n%>%<sg%>%<nom%>%<pxpl3%>:О1ст # ;
 
 
 LEXICON Postpositions
