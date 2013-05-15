@@ -5,12 +5,15 @@ SETS
 
 LIST A = a ; 
 LIST ADV = adv ; 
-LIST DIAL = dial ; 
-LIST N = n ; 
+LIST DIAL = dial dial_nw dial_w dial_se ; 
 LIST CC = cc ; 
 LIST IV = iv ; 
+LIST INDEF-SPAT-DER-NOUN = (cx_ine indef der_mwn) ;
+LIST N = n ; 
+LIST NOM = cx_nom ; 
 LIST PO = po ; 
 LIST PRED = der_pred ; 
+LIST PRON-PERS = (pron pers);
 LIST SG = sg ;
 LIST TV = tv ;  
 LIST V = v ; 
@@ -19,6 +22,16 @@ LIST SENT = sent ;
 
 SECTION
 
-REMOVE PRED IF (((-1* V-FIN)  (1* V-FIN OR SENT)) OR  ((-1* V-FIN OR SENT)  (1* V-FIN))) ;
+REMOVE PRED IF (1* V-FIN OR SENT) (-1* V-FIN OR SENT) ;
+
+REMOVE V-FIN IF (0C PRON-PERS + NOM) ;
+
+REMOVE PRON-PERS + NOM IF (-1C PRON-PERS + NOM) ;
+
+REMOVE INDEF-SPAT-DER-NOUN ; 
+
 REMOVE DIAL ;
+
+SELECT ("кизэ") IF (1 ("маней")) (2 ("чи")) ;
+
 
