@@ -1,11 +1,24 @@
-DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>" ;
+DELIMITERS = "<.>" "<..>" "<!>" "<?>" "<...>" "<¶>" ;
 SOFT-DELIMITERS = "<,>" ;
 
 SETS
 
+LIST A = a ; 
+LIST ADV = adv ; 
+LIST DIAL = dial ; 
 LIST N = n ; 
+LIST CC = cc ; 
+LIST IV = iv ; 
+LIST PO = po ; 
+LIST PRED = der_pred ; 
+LIST SG = sg ;
+LIST TV = tv ;  
+LIST V = v ; 
+LIST V-FIN = cond conj des imprt ind opt   ; 
+LIST SENT = sent ; 
 
 SECTION
 
-SELECT N ;
-  ## 
+REMOVE PRED IF (((-1* V-FIN)  (1* V-FIN OR SENT)) OR  ((-1* V-FIN OR SENT)  (1* V-FIN))) ;
+REMOVE DIAL ;
+
