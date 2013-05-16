@@ -5,25 +5,29 @@ SETS
 
 LIST A = a ; 
 LIST ADV = adv ; 
+LIST MWN = der_mwn ;
 LIST DIAL = dial dial_nw dial_w dial_se ; 
 LIST CC = cc ; 
+LIST CONNEG = conneg ; 
 LIST IV = iv ; 
 LIST INDEF-SPAT-DER-NOUN = (cx_ine indef der_mwn) ;
 LIST N = n ; 
 LIST NOM = cx_nom ; 
 LIST PO = po ; 
-LIST PRED = der_pred ; 
+LIST PRED = der_pred der_pr ; 
 LIST PRON-PERS = (pron pers);
 LIST SG = sg ;
 LIST TV = tv ;  
 LIST V = v ; 
+LIST V-AUX-NEG = (v aux neg) ; 
 LIST V-FIN = cond conj des imprt ind opt   ; 
 LIST SENT = sent ; 
 
 SECTION
 
+REMOVE CONNEG IF (NOT -1 V-AUX-NEG);
 REMOVE PRED IF (1* V-FIN OR SENT) (-1* V-FIN OR SENT) ;
-
+REMOVE MWN IF (1 N)
 REMOVE V-FIN IF (0C PRON-PERS + NOM) ;
 
 REMOVE PRON-PERS + NOM IF (-1C PRON-PERS + NOM) ;

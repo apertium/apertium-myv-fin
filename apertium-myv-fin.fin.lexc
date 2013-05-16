@@ -369,7 +369,7 @@ LEXICON N_PÖYTÄ
 0:t N_PLURAL_GENITIVE_IEN ;
 0:t N_PLURAL_ILLATIVE_IIN ;
 
-LEXICON N_KOIRA
+LEXICON N_KOIRA !! koira:koir
 
 %<sg%>%<nom%>:%{A%}  N_POSSES? ;
 %<sg%>%<par%>:%{A%}%{A%}  N_POSSES? ;
@@ -432,6 +432,7 @@ LEXICON N_SINGULARS_STRONG
 %<sg%>%<nom%>:0 N_POSSES ;
 %<pl%>%<nom%>:0 N_POSSES ;
 %<sg%>%<gen%>:0 N_POSSES ;
+%<sg%>%<par%>:%{A%} N_POSSES? ;
 %<sg%>%<ess%>:n%{A%} N_POSSES? ;
 
 LEXICON N_PLURALS_WEAK
@@ -766,7 +767,7 @@ LEXICON V_AJATELLA
 %<actv%>%<past%>:tel V_PAST_WEAK ;
 %<actv%>%<past%>:tel V_PAST_STRONG ;
 
-lEXICON V_ISTUA
+LEXICON V_ISTUA
 
 %<inf%>:a # ;
 %<actv%>%<pres%>:0 V_PRESENT_WEAK ;
@@ -776,6 +777,15 @@ lEXICON V_ISTUA
 %<actv%>%<past%>:0 V_PAST_WEAK ;
 %<actv%>%<past%>:0 V_PAST_STRONG ;
 
+LEXICON V_SYNTYÄ
+
+%<inf%>:tyä # ;
+%<actv%>%<pres%>:ny V_PRESENT_WEAK ;
+%<actv%>%<pres%>:ty V_PRESENT_STRONG ;
+%<actv%>%<pres%>:ty V_PRESENT_SG3_U ;
+%<pasv%>%<pres%>:ny V_PASSIVE_T ;
+%<actv%>%<past%>:ny V_PAST_WEAK ;
+%<actv%>%<past%>:ty V_PAST_STRONG ;
 
 LEXICON V_OLLA
 
@@ -1007,6 +1017,7 @@ LEXICON PRON_SE
 %<sg%>%<nom%>:e N_CLITS? ;
 %<sg%>%<gen%>:en N_CLITS? ;
 %<sg%>%<par%>:itä N_CLITS? ;
+%<sg%>%<all%>:ille N_CLITS? ;
 
 
 LEXICON PRON_NE
@@ -1069,6 +1080,7 @@ aika%<n%>:a N_AIKA ; ! "time"
 eläin%<n%>:eläi N_ELÄIN ; ! "animal"
 ihminen%<n%>:ihmi N_LEIKKIMINEN ; ! "hyman"
 ikkuna%<n%>:ikkun N_IKKUNA ; ! "window"
+kesäpäivä%<n%>:kesäpäiv N_KOIRA ; ! "summers day"
 kissa%<n%>:kiss N_TARHA ; ! "cat"
 koira%<n%>:koir N_KOIRA ; ! "dog"
 kysymys%<n%>:kysymy N_VASTAUS ; ! "question"
@@ -1078,6 +1090,7 @@ laskeminen%<n%>:laskemi N_LEIKKIMINEN ; ! "counting"
 leikki%<n%>:leik N_LEIKKI ; ! "play"
 leikkiminen%<n%>:leikkimi N_LEIKKIMINEN ; ! "play"
 lintu%<n%>:lin N_LINTU ; ! "bird"
+pentu%<n%>:pen N_LINTU ; ! "offspring"
 piilo%<n%>:piilo N_TALO ; ! "house"
 poika%<n%>:po N_POIKA ; ! "boy"
 puu%<n%>:pu N_PUU ; ! "tree"
@@ -1137,6 +1150,7 @@ pystyä%<vblex%>:pysty V_ISTUA ; ! "can"
 pitää%<vblex%>:pi V_LÖYTÄÄ ; ! "like"
 saada%<vblex%>:sa V_SAADA ; ! "get"
 sanoa%<vblex%>:sano V_KATSOA ; ! "say"
+syntyä%<vblex%>:syn V_SYNTYÄ ; ! "be born"
 syödä%<vblex%>:s V_SYÖDÄ ; ! "eat"
 tehdä%<vblex%>:te V_NÄHDÄ ; ! "do"
 tietää%<vblex%>:tie V_TIETÄÄ ; ! "know"
@@ -1149,6 +1163,7 @@ yrittää%<vblex%>:yrit V_LOPETTAA ; ! "try"
 
 LEXICON Adjectives
 
+aurinkoinen%<adj%>:aurinkoi A_ILOINEN ; ! "sunny"
 hauska%<adj%>:hausk A_VANHA ; ! "fun"
 hyvä%<adj%>:0 A_HYVÄ ; ! "good"
 iloinen%<adj%>:iloi A_ILOINEN ; ! "happy"

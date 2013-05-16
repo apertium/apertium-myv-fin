@@ -3,6 +3,7 @@
   <sdefs>
     <sdef n="a"  c="Имя существительное"/>
     <sdef n="adv"  c="Имя существительное"/>
+    <sdef n="card"  c="Имя существительное"/>
     <sdef n="cc"  c="Имя существительное"/>
     <sdef n="cs"  c="Имя существительное"/>
     <sdef n="dep"  c="Имя существительное"/>
@@ -30,6 +31,7 @@
     <e><p><l>а<s n="cc"/></l><r>mutta<s n="cc"/></r></p></e>
     <e><p><l>а<s n="cc"/></l><r>ja<s n="cc"/></r></p></e>
     <e><p><l>алдо<s n="po"/></l><r>alta<s n="po"/></r></p></e>
+    <e><p><l>ало<s n="po"/></l><r>alla<s n="po"/></r></p></e>
     <e><p><l>алов<s n="po"/></l><r>alle<s n="po"/></r></p></e>
     <e><p><l>ваномс<s n="v"/></l><r>katsoa<s n="v"/></r></p></e>
     <e><p><l>ватракш<s n="n"/></l><r>sammakko<s n="n"/></r></p></e>
@@ -59,7 +61,7 @@
     <e><p><l>мода<s n="n"/></l><r>maa<s n="n"/></r></p></e>
     <e><p><l>мон<s n="pron"/></l><r>minä<s n="pron"/></r></p></e>
     <e><p><l>муемс<s n="v"/></l><r>löytää<s n="v"/></r></p></e>
-    <e><p><l>ниле<s n="qnt"/><s n="num"/></l><r>neljä<s n="qnt"/><s n="num"/></r></p></e>
+    <e><p><l>ниле<s n="num"/><s n="card"/></l><r>neljä<s n="num"/></r></p></e>
     <e><p><l>овто<s n="n"/></l><r>karhu<s n="n"/></r></p></e>
     <e><p><l>пине<s n="n"/></l><r>koira<s n="n"/></r></p></e>
     <e><p><l>пизэ<s n="n"/></l><r>pesä<s n="n"/></r></p></e>
