@@ -9,10 +9,12 @@ LIST MWN = der_mwn ;
 LIST DIAL = dial dial_nw dial_w dial_se ; 
 LIST CC = cc ; 
 LIST CONNEG = conneg ; 
+LIST GEN = gen ; 
 LIST IV = iv ; 
-LIST INDEF-SPAT-DER-NOUN = (cx_ine indef der_mwn) ;
+LIST INDEF-SPAT-DER-NOUN = (ine indef der_mwn) ;
 LIST N = n ; 
-LIST NOM = cx_nom ; 
+LIST NOM = nom ; 
+LIST NUM = (num card) ; 
 LIST PO = po ; 
 LIST PRED = der_pred der_pr ; 
 LIST PRON-PERS = (pron pers);
@@ -21,13 +23,13 @@ LIST TV = tv ;
 LIST V = v ; 
 LIST V-AUX-NEG = (v aux neg) ; 
 LIST V-FIN = cond conj des imprt ind opt   ; 
-LIST SENT = sent ; 
+LIST SENT = clb ; 
 
 SECTION
 
 REMOVE CONNEG IF (NOT -1 V-AUX-NEG);
 REMOVE PRED IF (1* V-FIN OR SENT) (-1* V-FIN OR SENT) ;
-REMOVE MWN IF (1 N)
+REMOVE MWN IF (1 N) ;
 REMOVE V-FIN IF (0C PRON-PERS + NOM) ;
 
 REMOVE PRON-PERS + NOM IF (-1C PRON-PERS + NOM) ;
@@ -36,6 +38,7 @@ REMOVE INDEF-SPAT-DER-NOUN ;
 
 REMOVE DIAL ;
 
+SELECT NOM IF (-1 NUM) (0 GEN OR NOM) ;
 SELECT ("кизэ") IF (1 ("маней")) (2 ("чи")) ;
 
 
