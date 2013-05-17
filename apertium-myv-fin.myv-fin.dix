@@ -40,6 +40,7 @@
     <sdef n="com"  c="Имя существительное"/>
     <sdef n="pron"  c="Имя существительное"/>
     <sdef n="prop"  c="Имя существительное"/>
+    <sdef n="cnjcoo"  c="Имя существительное"/>
     <sdef n="qnt"  c="Имя существительное"/>
     <sdef n="refl"  c="Имя существительное"/>
     <sdef n="rquot"  c="Имя существительное"/> 
@@ -54,8 +55,8 @@
   <section id="main" type="standard">
     <!-- Раздел: Имя Существительное -->
 
-    <e><p><l>а<s n="cc"/></l><r>mutta<s n="cc"/></r></p></e>
-    <e><p><l>а<s n="cc"/></l><r>ja<s n="cc"/></r></p></e>
+    <e><p><l>а<s n="cc"/></l><r>mutta<s n="cnjcoo"/></r></p></e>
+    <e><p><l>а<s n="cc"/></l><r>ja<s n="cnjcoo"/></r></p></e>
     <e><p><l>алдо<s n="po"/></l><r>alta<s n="pr"/></r></p></e>
     <e><p><l>ало<s n="po"/></l><r>alla<s n="pr"/></r></p></e>
     <e><p><l>алов<s n="po"/></l><r>alle<s n="pr"/></r></p></e>
@@ -63,7 +64,7 @@
     <e><p><l>ватракш<s n="n"/></l><r>sammakko<s n="n"/></r></p></e>
     <e><p><l>вете<s n="qnt"/><s n="num"/></l><r>viisi<s n="qnt"/><s n="num"/></r></p></e>
     <e><p><l>вешнемс<s n="v"/><s n="tv"/></l><r>etsiä<s n="vblex"/></r></p></e>
-    <e><p><l>ды<s n="cc"/></l><r>ja<s n="cc"/></r></p></e>
+    <e><p><l>ды<s n="cc"/></l><r>ja<s n="cnjcoo"/></r></p></e>
     <e><p><l>кармамс<s n="v"/><s n="iv"/></l><r>alkaa<s n="vblex"/></r></p></e>
     <e><p><l>казне<s n="n"/></l><r>lahja<s n="n"/></r></p></e>
     <e><p><l>катка<s n="n"/></l><r>kissa<s n="n"/></r></p></e>
@@ -349,7 +350,7 @@
     <e><p><l>.<s n="clb"/></l><r>.<s n="sent"/></r></p></e>
     <e><p><l>-<s n="punct"/></l><r>-<s n="guio"/></r></p></e>
     <e><p><l>--<s n="punct"/></l><r>--<s n="guio"/></r></p></e>
-    <e><p><l>а<s n="cc"/></l><r>mutta<s n="cc"/></r></p></e>
+    <e><p><l>а<s n="cc"/></l><r>mutta<s n="cnjcoo"/></r></p></e>
     <e><p><l>аволь<s n="neg"/></l><r>ei<s n="vblex"/><s n="neg"/></r></p></e>
     <e><p><l>аламошка<s n="qnt"/></l><r>vähäsen<s n="qnt"/></r></p></e>
     <e><p><l>апак<s n="pcle"/></l><r>ei<s n="pcle"/></r></p></e>
