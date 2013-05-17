@@ -4,6 +4,7 @@ SOFT-DELIMITERS = "<,>" ;
 SETS
 
 LIST A = a ; 
+LIST ACTPRCSHORT = actprcshort ;
 LIST ADV = adv ; 
 LIST MWN = der_mwn ;
 LIST BOS = (>>>) ;
@@ -13,6 +14,7 @@ LIST CONNEG = conneg ;
 LIST GEN = gen ; 
 LIST IV = iv ; 
 LIST INDEF-SPAT-DER-NOUN = (ine indef der_mwn) ;
+LIST PRON-INTERR = (pron interr) ;
 LIST N = n ; 
 LIST NOM = nom ; 
 LIST NUM = (num card) ; 
@@ -27,13 +29,14 @@ LIST V = v ;
 LIST V-AUX-NEG = (v aux neg) ; 
 LIST V-FIN = cond conj des imprt ind opt   ; 
 LIST SENT = clb ; 
-
+LIST BARRIER = clb cc cs ;
+LIST QUESTION = ("?") ;
 
 SECTION
 
 REMOVE CONNEG IF (NOT -1 V-AUX-NEG);
-REMOVE PRED IF (1* V-FIN OR SENT) (-1* V-FIN OR SENT) ;
 REMOVE PRED IF (1C PO) ;
+REMOVE PRED IF (1* V-FIN OR SENT) (-1* V-FIN OR SENT) ;
 REMOVE MWN IF (1 N) ;
 REMOVE V-FIN IF (0C PRON-PERS + NOM) ;
 
@@ -43,6 +46,8 @@ REMOVE INDEF-SPAT-DER-NOUN ;
 
 REMOVE DIAL ;
 
+SELECT PRON-INTERR IF (1* QUESTION) ;
+SELECT V-FIN IF (NOT 1* V-FIN) (NOT -1* V-FIN) ;
 SELECT PROP IF (NOT -1 BOS) (0 ("<[А-ЯЁ].*>"r));
 SELECT NOM IF (-1 NUM) (0 GEN OR NOM) ;
 SELECT ("кизэ") IF (1 ("маней")) (2 ("чи")) ;
