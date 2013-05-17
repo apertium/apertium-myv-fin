@@ -47,7 +47,7 @@ REMOVE INDEF-SPAT-DER-NOUN ;
 REMOVE DIAL ;
 
 SELECT PRON-INTERR IF (1* QUESTION) ;
-SELECT V-FIN IF (NOT 1* V-FIN) (NOT -1* V-FIN) ;
+SELECT V-FIN IF (NOT 1* V-FIN) (NOT -1* V-FIN)  (NOT -1 BOS) (NOT 0 ("<[А-ЯЁ][а-яё].*>"r)) ;
 SELECT PROP IF (NOT -1 BOS) (0 ("<[А-ЯЁ].*>"r));
 SELECT NOM IF (-1 NUM) (0 GEN OR NOM) ;
 SELECT ("кизэ") IF (1 ("маней")) (2 ("чи")) ;
