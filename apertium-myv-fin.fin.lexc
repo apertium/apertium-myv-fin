@@ -12,6 +12,7 @@ Multichar_Symbols
 %<cnjsub%> ! Sub-ordinating conjunction
 %<sent%> ! Sentence-ending punctuation	 e.g. full stop, question mark
 
+%<np%> ! 
 %<sg%> ! Singular
 %<pl%> ! Plural
 
@@ -88,6 +89,19 @@ LEXICON Root
 0   Propers ;
 0   Numerals ;
 0   Punctuation ;
+
+LEXICON PROPN_MARJA
+
+%<sg%>%<nom%>:a  N_POSSES? ;
+0:a N_SINGULARS_WEAK ;
+0:a N_SINGULARS_STRONG ;
+0:a N_SINGULAR_ILLATIVE_AN ;
+0:o N_PLURALS_WEAK ;
+0:o N_PLURALS_STRONG ;
+0:o N_PLURAL_PARTITIVE_JA ;
+0:o N_PLURAL_GENITIVE_JEN ;
+0:o N_PLURAL_ILLATIVE_IHIN ;
+
 
 LEXICON PROPN_MARI
 
@@ -1114,6 +1128,7 @@ matka%<n%>:matk N_TARHA ; ! "distance, travel"
 LEXICON Propers
 
 Mari%<np%>%<ant%>%<f%>:Mar PROPN_MARI ;
+Marja%<np%>%<ant%>%<f%>:Marj PROPN_MARJA ;
 Jaakko%<np%>%<ant%>%<m%>:Jaak PROPN_JAAKKO ;
 
 LEXICON Verbs

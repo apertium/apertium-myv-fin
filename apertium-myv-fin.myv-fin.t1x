@@ -5,6 +5,9 @@
     <def-cat n="ind.v">
       <cat-item tags="v.*ind"/>
     </def-cat>
+    <def-cat n="n-prop">
+      <cat-item tags="n.prop.*"/>
+    </def-cat>
     <def-cat n="nom">
       <cat-item tags="n.*"/>
     </def-cat>
@@ -24,6 +27,10 @@
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
+    <def-attr n="a_defnes">
+      <attr-item tags="indef"/>
+      <attr-item tags="def"/>
+    </def-attr>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
     </def-attr>
@@ -48,6 +55,7 @@
     <def-attr n="a_nb">
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
+      <attr-item tags="ND"/>
     </def-attr>
     <def-attr n="a_obj">
       <attr-item tags="ocsg1"/>
@@ -73,6 +81,13 @@
       <attr-item tags="scpl3"/>
     </def-attr>
     <def-attr n="a_px">
+      <attr-item tags="px1sg"/>
+      <attr-item tags="px2sg"/>
+      <attr-item tags="px3sg"/>
+      <attr-item tags="px1pl"/>
+      <attr-item tags="px2pl"/>
+      <attr-item tags="px3pl"/>
+
       <attr-item tags="pxsg1"/>
       <attr-item tags="pxsg2"/>
       <attr-item tags="pxsg3"/>
@@ -103,14 +118,113 @@
     <def-var n="current_verb"/>
   </section-def-vars>
   <section-def-macros>
-    <def-macro n="test" npar="1">
-          <let>
-            <var n="number"/>
-            <lit v=""/>
-          </let>
+    <def-macro n="px-transform1" npar="1">
+        <choose>
+          <when>
+            <test>
+              <equal><clip pos="1" side="sl" part="a_px"/><lit-tag v="pxsg1"/></equal>
+            </test>
+            <let><clip pos="1" side="tl" part="a_px"/><lit-tag v="px1sg"/></let>
+          </when>
+          <when>
+            <test>
+              <equal><clip pos="1" side="sl" part="a_px"/><lit-tag v="pxsg2"/></equal>
+            </test>
+            <let><clip pos="1" side="tl" part="a_px"/><lit-tag v="px2sg"/></let>
+          </when>
+          <when>
+            <test>
+              <equal><clip pos="1" side="sl" part="a_px"/><lit-tag v="pxsg3"/></equal>
+            </test>
+            <let><clip pos="1" side="tl" part="a_px"/><lit-tag v="px3sg"/></let>
+          </when>
+          <when>
+            <test>
+              <equal><clip pos="1" side="sl" part="a_px"/><lit-tag v="pxpl1"/></equal>
+            </test>
+            <let><clip pos="1" side="tl" part="a_px"/><lit-tag v="px1pl"/></let>
+          </when>
+          <when>
+            <test>
+              <equal><clip pos="1" side="sl" part="a_px"/><lit-tag v="pxpl2"/></equal>
+            </test>
+            <let><clip pos="1" side="tl" part="a_px"/><lit-tag v="px2pl"/></let>
+          </when>
+          <when>
+            <test>
+              <equal><clip pos="1" side="sl" part="a_px"/><lit-tag v="pxpl3"/></equal>
+            </test>
+            <let><clip pos="1" side="tl" part="a_px"/><lit-tag v="px3pl"/></let>
+          </when>
+        </choose>
     </def-macro>
   </section-def-macros>
   <section-rules>
+
+    <rule comment="REGLA: n prop">
+      <pattern>
+        <pattern-item n="n-prop"/>
+      </pattern>
+      <action>
+        <let>
+          <clip pos="1" side="tl" part="a_defnes"/>
+          <lit v=""/>
+        </let>
+        
+        <out>
+          <chunk name="prop" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: nom">
+      <pattern>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="px-transform1">
+          <with-param pos="1"/>
+        </call-macro>
+        <choose><when>
+        <test><and>
+          <equal><clip pos="1" side="sl" part="a_nb"/><lit-tag v="pl"/></equal>
+          <equal><clip pos="1" side="tl" part="a_nb"/><lit-tag v="ND"/></equal>
+        </and></test>
+        <let>
+          <clip pos="1" side="tl" part="a_nb"/>
+          <lit-tag v="pl"/>
+        </let>
+        </when>
+        <when>
+        <test><and>
+          <not><equal><clip pos="1" side="sl" part="a_nb"/><lit-tag v="pl"/></equal></not>
+          <equal><clip pos="1" side="tl" part="a_nb"/><lit-tag v="ND"/></equal>
+        </and></test>
+        <let>
+          <clip pos="1" side="tl" part="a_nb"/>
+          <lit-tag v="sg"/>
+        </let>
+        </when>
+        </choose> 
+        <out>
+          <chunk name="n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="REGLA: SENT">
       <pattern>
