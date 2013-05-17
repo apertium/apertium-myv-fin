@@ -27,5 +27,6 @@
 /myv-fin.prob -text svneol=unset#unset
 texts/story.fin.txt -text
 texts/story.myv.txt -text svneol=unset#application/octet-stream
+texts/udhr.myv.txt -text svneol=unset#application/octet-stream
 texts/vixen.fin.txt -text svneol=unset#application/octet-stream
 texts/vixen.myv.txt -text svneol=unset#application/octet-stream
