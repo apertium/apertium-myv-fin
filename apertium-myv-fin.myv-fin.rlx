@@ -17,6 +17,7 @@ LIST N = n ;
 LIST NOM = nom ; 
 LIST NUM = (num card) ; 
 LIST PO = po ; 
+LIST POSTP-COMP = (prop sg nom indef) (sg nom indef) (sg gen def) (pl gen def) ; #this might need dial (pl nom def)
 LIST PRED = der_pred der_pr ; 
 LIST PRON-PERS = (pron pers);
 LIST PROP = prop ;
@@ -32,6 +33,7 @@ SECTION
 
 REMOVE CONNEG IF (NOT -1 V-AUX-NEG);
 REMOVE PRED IF (1* V-FIN OR SENT) (-1* V-FIN OR SENT) ;
+REMOVE PRED IF (1C PO) ;
 REMOVE MWN IF (1 N) ;
 REMOVE V-FIN IF (0C PRON-PERS + NOM) ;
 
