@@ -6,6 +6,7 @@
     <sdef n="aux"  c="Имя существительное"/>
     <sdef n="card"  c="Имя существительное"/>
     <sdef n="pcle"  c="Имя существительное"/>
+    <sdef n="prn"  c="Имя существительное"/>
     <sdef n="pred2"  c="Имя существительное"/>
     <sdef n="dem"  c="Имя существительное"/>
     <sdef n="np"  c="Имя существительное"/>
@@ -396,7 +397,7 @@
     <e><p><l>кода<s n="pron"/></l><r>miten<s n="pron"/></r></p></e>
     <e><p><l>кортамо<s n="n"/></l><r>puhe<s n="n"/><s n="ND"/></r></p></e>
     <e><p><l>кортамс<s n="v"/><s n="iv"/></l><r>puhua<s n="vblex"/></r></p></e>
-    <e><p><l>косо<s n="pron"/></l><r>missä<s n="pron"/></r></p></e>
+    <e><p><l>косо<s n="pron"/><s n="ine"/><s n="interr"/></l><r>missä<s n="prn"/></r></p></e>
     <e><p><l>кото<s n="num"/><s n="card"/></l><r>kuusi<s n="num"/></r></p></e>
     <e><p><l>кува<s n="spat"/></l><r>missä<s n="spat"/></r></p></e>
     <e><p><l>лембе<s n="a"/></l><r>lämmin<s n="a"/></r></p></e>
@@ -467,6 +468,7 @@
     <e><p><l>эрьва<s n="n"/></l><r>jokainen<s n="n"/><s n="ND"/></r></p></e>
     <e><p><l>ютамс<s n="v"/><s n="tv"/></l><r>kulkea ohi<s n="vblex"/></r></p></e>
 
+    <e><p><l>а<s n="pcle"/><s n="neg"/></l><r>ei<s n="vblex"/><s n="neg"/></r></p></e>
 
 
   </section>

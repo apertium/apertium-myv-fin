@@ -31,6 +31,7 @@ LIST V-FIN = cond conj des imprt ind opt   ;
 LIST SENT = clb ; 
 LIST BARRIER = clb cc cs ;
 LIST QUESTION = ("?") ;
+LIST NEG-WORD = (pcle neg) ; 
 
 SECTION
 
@@ -52,4 +53,4 @@ SELECT PROP IF (NOT -1 BOS) (0 ("<[А-ЯЁ].*>"r));
 SELECT NOM IF (-1 NUM) (0 GEN OR NOM) ;
 SELECT ("кизэ") IF (1 ("маней")) (2 ("чи")) ;
 
-
+SELECT NEG-WORD IF (1 V-FIN);
