@@ -9,6 +9,7 @@
     <sdef n="pred2"  c="Имя существительное"/>
     <sdef n="dem"  c="Имя существительное"/>
     <sdef n="np"  c="Имя существительное"/>
+    <sdef n="temp"  c="Имя существительное"/>
     <sdef n="ND"  c="Имя существительное"/>
     <sdef n="ant"  c="Имя существительное"/>
     <sdef n="m"  c="Имя существительное"/>
@@ -151,7 +152,7 @@
     <e><p><l>иля<s n="imprt"/></l><r>älä<s n="imprt"/></r></p></e>
     <e><p><l>кавто<s n="num"/><s n="card"/></l><r>kaksi<s n="num"/></r></p></e>
     <e><p><l>колмо<s n="num"/><s n="card"/></l><r>kolme<s n="num"/></r></p></e>
-    <e><p><l>мейле<s n="adv"/></l><r>sitten<s n="adv"/></r></p></e>
+    <e><p><l>мейле<s n="adv"/><s n="temp"/></l><r>sitten<s n="adv"/></r></p></e>
     <e><p><l>мейле<s n="adv"/></l><r>myöhemmin<s n="adv"/></r></p></e>
     <e><p><l>молемс<s n="v"/><s n="iv"/></l><r>mennä<s n="vblex"/></r></p></e>
     <e><p><l>молемс<s n="v"/><s n="iv"/></l><r>kulkea<s n="vblex"/></r></p></e>
