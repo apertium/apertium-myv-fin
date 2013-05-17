@@ -9,6 +9,7 @@
     <sdef n="pred2"  c="Имя существительное"/>
     <sdef n="dem"  c="Имя существительное"/>
     <sdef n="punct"  c="Имя существительное"/>
+    <sdef n="pr"  c="Имя существительное"/>
     <sdef n="spat"  c="Имя существительное"/>
     <sdef n="clb"  c="Имя существительное"/>
     <sdef n="adn"  c="Имя существительное"/>
@@ -36,6 +37,7 @@
     <sdef n="pers"  c="Имя существительное"/>
     <sdef n="pl"  c="Имя существительное"/>
     <sdef n="po"  c="Имя существительное"/>
+    <sdef n="com"  c="Имя существительное"/>
     <sdef n="pron"  c="Имя существительное"/>
     <sdef n="prop"  c="Имя существительное"/>
     <sdef n="qnt"  c="Имя существительное"/>
@@ -54,9 +56,9 @@
 
     <e><p><l>а<s n="cc"/></l><r>mutta<s n="cc"/></r></p></e>
     <e><p><l>а<s n="cc"/></l><r>ja<s n="cc"/></r></p></e>
-    <e><p><l>алдо<s n="po"/></l><r>alta<s n="po"/></r></p></e>
-    <e><p><l>ало<s n="po"/></l><r>alla<s n="po"/></r></p></e>
-    <e><p><l>алов<s n="po"/></l><r>alle<s n="po"/></r></p></e>
+    <e><p><l>алдо<s n="po"/></l><r>alta<s n="pr"/></r></p></e>
+    <e><p><l>ало<s n="po"/></l><r>alla<s n="pr"/></r></p></e>
+    <e><p><l>алов<s n="po"/></l><r>alle<s n="pr"/></r></p></e>
     <e><p><l>ваномс<s n="v"/><s n="tv"/></l><r>katsoa<s n="vblex"/></r></p></e>
     <e><p><l>ватракш<s n="n"/></l><r>sammakko<s n="n"/></r></p></e>
     <e><p><l>вете<s n="qnt"/><s n="num"/></l><r>viisi<s n="qnt"/><s n="num"/></r></p></e>
@@ -137,7 +139,7 @@
     <e><p><l>ава<s n="n"/></l><r>emo<s n="n"/></r></p></e>
     <e><p><l>васня<s n="adv"/></l><r>ensin<s n="adv"/></r></p></e>
     <e><p><l>вейке<s n="qnt"/></l><r>yksi<s n="qnt"/></r></p></e>
-    <e><p><l>икеле<s n="po"/></l><r>edessä<s n="po"/></r></p></e>
+    <e><p><l>икеле<s n="po"/></l><r>edessä<s n="pr"/></r></p></e>
     <e><p><l>иля<s n="imprt"/></l><r>älä<s n="imprt"/></r></p></e>
     <e><p><l>кавто<s n="num"/><s n="card"/></l><r>kaksi<s n="num"/></r></p></e>
     <e><p><l>колмо<s n="num"/><s n="card"/></l><r>kolme<s n="num"/></r></p></e>
@@ -175,7 +177,7 @@
     <e><p><l>вайгель<s n="n"/></l><r>ääni<s n="n"/></r></p></e>
     <e><p><l>вайгельне<s n="n"/></l><r>pieni ääni<s n="n"/></r></p></e>
     <e><p><l>вакс<s n="n"/></l><r>vaaksa<s n="n"/></r></p></e>
-    <e><p><l>вакссо<s n="po"/></l><r>vieressä<s n="po"/></r></p></e>
+    <e><p><l>вакссо<s n="po"/></l><r>vieressä<s n="pr"/></r></p></e>
     <e><p><l>вал<s n="n"/></l><r>sana<s n="n"/></r></p></e>
     <e><p><l>вал<s n="n"/></l><r>puhe<s n="n"/></r></p></e>
     <e><p><l>валгомс<s n="v"/><s n="iv"/></l><r>laskeutua<s n="vblex"/></r></p></e>
@@ -234,7 +236,7 @@
     <e><p><l>мазый<s n="a"/></l><r>kaunis<s n="a"/></r></p></e>
     <e><p><l>мала<s n="a"/></l><r>@мала<s n="a"/></r></p></e>
     <e><p><l>маней<s n="a"/></l><r>aurinkoinen<s n="a"/></r></p></e>
-    <e><p><l>марто<s n="po"/></l><r>kanssa<s n="po"/></r></p></e>
+    <e><p><l>марто<s n="po"/><s n="com"/></l><r>kanssa<s n="pr"/></r></p></e>
     <e><p><l>матедевемс<s n="v"/><s n="iv"/></l><r>nukahtaa<s n="vblex"/></r></p></e>
     <e><p><l>маштомс<s n="v"/><s n="iv"/></l><r>osata<s n="vblex"/></r></p></e>
     <e><p><l>медь<s n="n"/></l><r>hunaja<s n="n"/></r></p></e>
@@ -263,7 +265,7 @@
     <e><p><l>пельнемс<s n="v"/><s n="tv"/></l><r>rei'ittää<s n="vblex"/></r></p></e>
     <e><p><l>пене<s n="n"/></l><r>pätkä<s n="n"/></r></p></e>
     <e><p><l>пертьпеле<s n="adv"/></l><r>ympärillä<s n="adv"/></r></p></e>
-    <e><p><l>перька<s n="po"/></l><r>ympäri<s n="po"/></r></p></e>
+    <e><p><l>перька<s n="po"/></l><r>ympäri<s n="pr"/></r></p></e>
     <e><p><l>пешксе<s n="a"/></l><r>täynnä oleva<s n="a"/></r></p></e>
     <e><p><l>пизёл<s n="n"/></l><r>pihlajanmarja<s n="n"/></r></p></e>
 <e><p><l>пизёлкс<s n="n"/></l><r>pihlaja<s n="n"/></r></p></e>
@@ -394,7 +396,6 @@
     <e><p><l>ловомс<s n="v"/><s n="tv"/></l><r>laskea<s n="vblex"/></r></p></e>
     <e><p><l>ловома<s n="n"/></l><r>luku<s n="n"/></r></p></e>
     <e><p><l>маласо<s n="adv"/></l><r>lähellä<s n="adv"/></r></p></e>
-    <e><p><l>марто<s n="po"/></l><r>kanssa<s n="po"/></r></p></e>
     <e><p><l>март<s n="n"/></l><r>maaliskuu<s n="n"/></r></p></e>
     <e><p><l>Маря<s n="n"/><s n="prop"/></l><r>Marja<s n="n"/></r></p></e>
     <e><p><l>марявомс<s n="v"/><s n="iv"/></l><r>kuulua<s n="vblex"/></r></p></e>
@@ -421,7 +422,7 @@
     <e><p><l>пекстамс<s n="v"/><s n="tv"/></l><r>sulkea<s n="vblex"/></r></p></e>
     <e><p><l>пире<s n="n"/></l><r>puutarha<s n="n"/></r></p></e>
     <e><p><l>покш<s n="a"/></l><r>iso<s n="a"/></r></p></e>
-    <e><p><l>потсо<s n="po"/></l><r>sisällä<s n="po"/></r></p></e>
+    <e><p><l>потсо<s n="po"/></l><r>sisällä<s n="pr"/></r></p></e>
     <e><p><l>прядомс<s n="v"/><s n="tv"/></l><r>päättää<s n="vblex"/></r></p></e>
     <e><p><l>прядомс<s n="v"/><s n="tv"/></l><r>lopettaa<s n="vblex"/></r></p></e>
     <e><p><l>пшкадемс<s n="v"/><s n="iv"/></l><r>puhutella<s n="vblex"/></r></p></e>
@@ -451,7 +452,7 @@
     <e><p><l>чиемс<s n="v"/><s n="iv"/></l><r>juosta<s n="vblex"/></r></p></e>
     <e><p><l>эзь<s n="v"/><s n="aux"/><s n="neg"/></l><r>ei<s n="vblex"/></r></p></e>
     <e><p><l>эй<s n="n"/></l><r>jää<s n="n"/></r></p></e>
-    <e><p><l>эйсэ<s n="po"/><s n="ine"/></l><r>sisällä<s n="po"/></r></p></e>
+    <e><p><l>эйсэ<s n="po"/><s n="ine"/></l><r>sisällä<s n="pr"/></r></p></e>
     <e><p><l>эйкакш<s n="n"/></l><r>lapsi<s n="n"/></r></p></e>
     <e><p><l>эрьва<s n="n"/></l><r>jokainen<s n="n"/></r></p></e>
     <e><p><l>ютамс<s n="v"/><s n="tv"/></l><r>kulkea ohi<s n="vblex"/></r></p></e>
