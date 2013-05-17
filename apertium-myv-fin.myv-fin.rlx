@@ -6,6 +6,7 @@ SETS
 LIST A = a ; 
 LIST ADV = adv ; 
 LIST MWN = der_mwn ;
+LIST BOS = (>>>) ;
 LIST DIAL = dial dial_nw dial_w dial_se ; 
 LIST CC = cc ; 
 LIST CONNEG = conneg ; 
@@ -18,12 +19,14 @@ LIST NUM = (num card) ;
 LIST PO = po ; 
 LIST PRED = der_pred der_pr ; 
 LIST PRON-PERS = (pron pers);
+LIST PROP = prop ;
 LIST SG = sg ;
 LIST TV = tv ;  
 LIST V = v ; 
 LIST V-AUX-NEG = (v aux neg) ; 
 LIST V-FIN = cond conj des imprt ind opt   ; 
 LIST SENT = clb ; 
+
 
 SECTION
 
@@ -38,6 +41,7 @@ REMOVE INDEF-SPAT-DER-NOUN ;
 
 REMOVE DIAL ;
 
+SELECT PROP IF (NOT -1 BOS) (0 ("<[А-ЯЁ].*>"r));
 SELECT NOM IF (-1 NUM) (0 GEN OR NOM) ;
 SELECT ("кизэ") IF (1 ("маней")) (2 ("чи")) ;
 
