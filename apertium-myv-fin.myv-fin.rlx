@@ -17,6 +17,7 @@ LIST INDEF-SPAT-DER-NOUN = (ine indef der_mwn) ;
 LIST PRON-INTERR = (pron interr) ;
 LIST N = n ; 
 LIST NOM = nom ; 
+LIST NON-VERBAL-PREDICATION-MORPH = (a der_pr ind prt2) (a der_pr ind prs scsg1) (a der_pr ind prs scsg2) (a der_pr ind prs scpl1) (a der_pr ind prs scpl2) ;
 LIST NUM = (num card) ; 
 LIST PO = po ; 
 LIST POSTP-COMP = (prop sg nom indef) (sg nom indef) (sg gen def) (pl gen def) ; #this might need dial (pl nom def)
@@ -32,6 +33,7 @@ LIST SENT = clb ;
 LIST BARRIER = clb cc cs ;
 LIST QUESTION = ("?") ;
 LIST NEG-WORD = (pcle neg) ; 
+
 
 SECTION
 
@@ -52,5 +54,5 @@ SELECT V-FIN IF (NOT 1* V-FIN) (NOT -1* V-FIN)  (NOT -1 BOS) (NOT 0 ("<[А-ЯЁ]
 SELECT PROP IF (NOT -1 BOS) (0 ("<[А-ЯЁ].*>"r));
 SELECT NOM IF (-1 NUM) (0 GEN OR NOM) ;
 SELECT ("кизэ") IF (1 ("маней")) (2 ("чи")) ;
-
+SELECT NON-VERBAL-PREDICATION-MORPH ;
 SELECT NEG-WORD IF (1 V-FIN);
