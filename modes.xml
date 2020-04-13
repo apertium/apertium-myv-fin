@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <modes>
-  <!-- myv → fin --> 
+  <!-- myv→fin direction: -->
 
   <mode name="myv-fin" install="yes">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="myv-fin.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="myv-fin.rlx.bin"/>
+        <file name="myv-fin.mor.rlx.bin"/>
       </program>
-      <program name="apertium-tagger -g $2">
-        <file name="myv-fin.prob"/>
+      <program name="cg-proc -n -1 -w">
+        <file name="myv-fin.syn.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="myv-fin.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="myv-fin.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
         <file name="apertium-myv-fin.myv-fin.t1x"/>
@@ -35,20 +38,23 @@
     </pipeline>
   </mode>
 
-  <mode name="myv-fin-debug" install="no">
+  <mode name="myv-fin-debug" install="yes">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="myv-fin.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="myv-fin.rlx.bin"/>
+        <file name="myv-fin.mor.rlx.bin"/>
       </program>
-      <program name="apertium-tagger -g $2">
-        <file name="myv-fin.prob"/>
+      <program name="cg-proc -n -1 -w">
+        <file name="myv-fin.syn.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="myv-fin.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="myv-fin.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
         <file name="apertium-myv-fin.myv-fin.t1x"/>
@@ -67,11 +73,12 @@
       </program>
     </pipeline>
   </mode>
- 
-  
+
+
+
   <mode name="myv-fin-morph" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="myv-fin.automorf.hfst"/>
       </program>
     </pipeline>
@@ -79,42 +86,59 @@
 
   <mode name="myv-fin-disam" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="myv-fin.automorf.hfst"/>
       </program>
-      <program name="cg-conv -a"/>
-      <program name="vislcg3 --trace --grammar">
-        <file name="myv-fin.rlx.bin"/>
+      <program name="cg-proc -w">
+        <file name="myv-fin.mor.rlx.bin"/>
       </program>
     </pipeline>
   </mode>
+
+
+
+  <mode name="myv-fin-syntax" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="myv-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="myv-fin.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="myv-fin.syn.rlx.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
 
 
   <mode name="myv-fin-tagger" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="myv-fin.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="myv-fin.rlx.bin"/>
+        <file name="myv-fin.mor.rlx.bin"/>
       </program>
-      <program name="apertium-tagger -g $2">
-        <file name="myv-fin.prob"/>
+      <program name="cg-proc -w">
+        <file name="myv-fin.syn.rlx.bin"/>
       </program>
-      <program name="apertium-pretransfer"/>
     </pipeline>
   </mode>
+
+
 
   <mode name="myv-fin-biltrans" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="myv-fin.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="myv-fin.rlx.bin"/>
+        <file name="myv-fin.mor.rlx.bin"/>
       </program>
-      <program name="apertium-tagger -g $2">
-        <file name="myv-fin.prob"/>
+      <program name="cg-proc -n -1 -w">
+        <file name="myv-fin.syn.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
@@ -123,44 +147,45 @@
     </pipeline>
   </mode>
 
+
   <mode name="myv-fin-lextor" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="myv-fin.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="myv-fin.rlx.bin"/>
+        <file name="myv-fin.mor.rlx.bin"/>
       </program>
-      <program name="apertium-tagger -g $2">
-        <file name="myv-fin.prob"/>
+      <program name="cg-proc -n -1 -w">
+        <file name="myv-fin.syn.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="myv-fin.autobil.bin"/>
       </program>
-      <program name="lrx-proc -t">
+      <program name="lrx-proc -m -t">
         <file name="myv-fin.autolex.bin"/>
       </program>
     </pipeline>
   </mode>
 
 
-  <mode name="myv-fin-transfer" install="no">
+  <mode name="myv-fin-chunker" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="myv-fin.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="myv-fin.rlx.bin"/>
+        <file name="myv-fin.mor.rlx.bin"/>
       </program>
-      <program name="apertium-tagger -g $2">
-        <file name="myv-fin.prob"/>
+      <program name="cg-proc -n -1 -w">
+        <file name="myv-fin.syn.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="myv-fin.autobil.bin"/>
       </program>
-      <program name="lrx-proc">
+      <program name="lrx-proc -m">
         <file name="myv-fin.autolex.bin"/>
       </program>
       <program name="apertium-transfer -t -b">
@@ -172,27 +197,22 @@
 
   <mode name="myv-fin-interchunk" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="myv-fin.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="myv-fin.rlx.bin"/>
+        <file name="myv-fin.mor.rlx.bin"/>
       </program>
-      <program name="apertium-tagger -g $2">
-        <file name="myv-fin.prob"/>
+      <program name="cg-proc -n -1 -w">
+        <file name="myv-fin.syn.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
-      <program name="lt-proc -b">
-        <file name="myv-fin.autobil.bin"/>
-      </program>
-      <program name="lrx-proc">
-        <file name="myv-fin.autolex.bin"/>
-      </program>
-      <program name="apertium-transfer -b">
+      <program name="apertium-transfer">
         <file name="apertium-myv-fin.myv-fin.t1x"/>
         <file name="myv-fin.t1x.bin"/>
+        <file name="myv-fin.autobil.bin"/>
       </program>
-      <program name="apertium-interchunk">
+      <program name="apertium-interchunk -t">
         <file name="apertium-myv-fin.myv-fin.t2x"/>
         <file name="myv-fin.t2x.bin"/>
       </program>
@@ -201,20 +221,20 @@
 
   <mode name="myv-fin-postchunk" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="myv-fin.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="myv-fin.rlx.bin"/>
+        <file name="myv-fin.mor.rlx.bin"/>
       </program>
-      <program name="apertium-tagger -g $2">
-        <file name="myv-fin.prob"/>
+      <program name="cg-proc -n -1 -w">
+        <file name="myv-fin.syn.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="myv-fin.autobil.bin"/>
       </program>
-      <program name="lrx-proc">
+      <program name="lrx-proc -m">
         <file name="myv-fin.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
@@ -232,22 +252,305 @@
     </pipeline>
   </mode>
 
-  <!-- fin → myv -->
+  <mode name="myv-fin-dgen">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="myv-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="myv-fin.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -n -1 -w">
+        <file name="myv-fin.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="myv-fin.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="myv-fin.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-myv-fin.myv-fin.t1x"/>
+        <file name="myv-fin.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-myv-fin.myv-fin.t2x"/>
+        <file name="myv-fin.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-myv-fin.myv-fin.t3x"/>
+        <file name="myv-fin.t3x.bin"/>
+      </program>
+      <program name="hfst-proc -d">
+        <file name="myv-fin.autogen.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+
+  <!-- untrimmed myv-fin, for debug: -->
+  <mode name="umyv-fin" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="myv-fin.automorf-untrimmed.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="myv-fin.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -n -1 -w">
+        <file name="myv-fin.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="myv-fin.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="myv-fin.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-myv-fin.myv-fin.t1x"/>
+        <file name="myv-fin.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-myv-fin.myv-fin.t2x"/>
+        <file name="myv-fin.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-myv-fin.myv-fin.t3x"/>
+        <file name="myv-fin.t3x.bin"/>
+      </program>
+      <program name="hfst-proc $1">
+        <file name="myv-fin.autogen.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+
+  <mode name="umyv-fin-morph" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="myv-fin.automorf-untrimmed.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="umyv-fin-disam" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="myv-fin.automorf-untrimmed.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="myv-fin.mor.rlx.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="umyv-fin-syntax" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="myv-fin.automorf-untrimmed.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="myv-fin.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="myv-fin.syn.rlx.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="umyv-fin-tagger" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="myv-fin.automorf-untrimmed.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="myv-fin.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="myv-fin.syn.rlx.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="umyv-fin-biltrans" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="myv-fin.automorf-untrimmed.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="myv-fin.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -n -1 -w">
+        <file name="myv-fin.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="myv-fin.autobil.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="umyv-fin-lextor" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="myv-fin.automorf-untrimmed.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="myv-fin.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -n -1 -w">
+        <file name="myv-fin.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="myv-fin.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m -t">
+        <file name="myv-fin.autolex.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="umyv-fin-chunker" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="myv-fin.automorf-untrimmed.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="myv-fin.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -n -1 -w">
+        <file name="myv-fin.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="myv-fin.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="myv-fin.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -t -b">
+        <file name="apertium-myv-fin.myv-fin.t1x"/>
+        <file name="myv-fin.t1x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="umyv-fin-interchunk" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="myv-fin.automorf-untrimmed.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="myv-fin.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -n -1 -w">
+        <file name="myv-fin.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="apertium-transfer">
+        <file name="apertium-myv-fin.myv-fin.t1x"/>
+        <file name="myv-fin.t1x.bin"/>
+        <file name="myv-fin.autobil.bin"/>
+      </program>
+      <program name="apertium-interchunk -t">
+        <file name="apertium-myv-fin.myv-fin.t2x"/>
+        <file name="myv-fin.t2x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="umyv-fin-postchunk" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="myv-fin.automorf-untrimmed.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="myv-fin.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -n -1 -w">
+        <file name="myv-fin.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="myv-fin.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="myv-fin.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-myv-fin.myv-fin.t1x"/>
+        <file name="myv-fin.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-myv-fin.myv-fin.t2x"/>
+        <file name="myv-fin.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-myv-fin.myv-fin.t3x"/>
+        <file name="myv-fin.t3x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="umyv-fin-dgen">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="myv-fin.automorf-untrimmed.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="myv-fin.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -n -1 -w">
+        <file name="myv-fin.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="myv-fin.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="myv-fin.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-myv-fin.myv-fin.t1x"/>
+        <file name="myv-fin.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-myv-fin.myv-fin.t2x"/>
+        <file name="myv-fin.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-myv-fin.myv-fin.t3x"/>
+        <file name="myv-fin.t3x.bin"/>
+      </program>
+      <program name="hfst-proc -d">
+        <file name="myv-fin.autogen.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+
+  <!-- fin→myv direction: -->
 
   <mode name="fin-myv" install="yes">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="fin-myv.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="fin-myv.rlx.bin"/>
+        <file name="fin-myv.mor.rlx.bin"/>
       </program>
-      <program name="apertium-tagger -g $2">
-        <file name="fin-myv.prob"/>
+      <program name="cg-proc -n -1 -w">
+        <file name="fin-myv.syn.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="fin-myv.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="fin-myv.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
         <file name="apertium-myv-fin.fin-myv.t1x"/>
@@ -267,20 +570,23 @@
     </pipeline>
   </mode>
 
-  <mode name="fin-myv-debug" install="no">
+  <mode name="fin-myv-debug" install="yes">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="fin-myv.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="fin-myv.rlx.bin"/>
+        <file name="fin-myv.mor.rlx.bin"/>
       </program>
-      <program name="apertium-tagger -g $2">
-        <file name="fin-myv.prob"/>
+      <program name="cg-proc -n -1 -w">
+        <file name="fin-myv.syn.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="fin-myv.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="fin-myv.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
         <file name="apertium-myv-fin.fin-myv.t1x"/>
@@ -299,10 +605,12 @@
       </program>
     </pipeline>
   </mode>
-  
+
+
+
   <mode name="fin-myv-morph" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="fin-myv.automorf.hfst"/>
       </program>
     </pipeline>
@@ -310,42 +618,59 @@
 
   <mode name="fin-myv-disam" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="fin-myv.automorf.hfst"/>
       </program>
-      <program name="cg-conv -a"/>
-      <program name="vislcg3 --trace --grammar">
-        <file name="fin-myv.rlx.bin"/>
+      <program name="cg-proc -w">
+        <file name="fin-myv.mor.rlx.bin"/>
       </program>
     </pipeline>
   </mode>
+
+
+
+  <mode name="fin-myv-syntax" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="fin-myv.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-myv.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-myv.syn.rlx.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
 
 
   <mode name="fin-myv-tagger" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="fin-myv.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="fin-myv.rlx.bin"/>
+        <file name="fin-myv.mor.rlx.bin"/>
       </program>
-      <program name="apertium-tagger -g $2">
-        <file name="fin-myv.prob"/>
+      <program name="cg-proc -w">
+        <file name="fin-myv.syn.rlx.bin"/>
       </program>
-      <program name="apertium-pretransfer"/>
     </pipeline>
   </mode>
+
+
 
   <mode name="fin-myv-biltrans" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="fin-myv.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="fin-myv.rlx.bin"/>
+        <file name="fin-myv.mor.rlx.bin"/>
       </program>
-      <program name="apertium-tagger -g $2">
-        <file name="fin-myv.prob"/>
+      <program name="cg-proc -n -1 -w">
+        <file name="fin-myv.syn.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
@@ -354,43 +679,48 @@
     </pipeline>
   </mode>
 
+
   <mode name="fin-myv-lextor" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="fin-myv.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="fin-myv.rlx.bin"/>
+        <file name="fin-myv.mor.rlx.bin"/>
       </program>
-      <program name="apertium-tagger -g $2">
-        <file name="fin-myv.prob"/>
+      <program name="cg-proc -n -1 -w">
+        <file name="fin-myv.syn.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="fin-myv.autobil.bin"/>
       </program>
-      <program name="lrx-proc">
+      <program name="lrx-proc -m -t">
         <file name="fin-myv.autolex.bin"/>
       </program>
     </pipeline>
   </mode>
 
-  <mode name="fin-myv-transfer" install="no">
+
+  <mode name="fin-myv-chunker" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="fin-myv.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="fin-myv.rlx.bin"/>
+        <file name="fin-myv.mor.rlx.bin"/>
       </program>
-      <program name="apertium-tagger -g $2">
-        <file name="fin-myv.prob"/>
+      <program name="cg-proc -n -1 -w">
+        <file name="fin-myv.syn.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="fin-myv.autobil.bin"/>
       </program>
-      <program name="apertium-transfer -b">
+      <program name="lrx-proc -m">
+        <file name="fin-myv.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -t -b">
         <file name="apertium-myv-fin.fin-myv.t1x"/>
         <file name="fin-myv.t1x.bin"/>
       </program>
@@ -399,24 +729,22 @@
 
   <mode name="fin-myv-interchunk" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="fin-myv.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="fin-myv.rlx.bin"/>
+        <file name="fin-myv.mor.rlx.bin"/>
       </program>
-      <program name="apertium-tagger -g $2">
-        <file name="fin-myv.prob"/>
+      <program name="cg-proc -n -1 -w">
+        <file name="fin-myv.syn.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
-      <program name="lt-proc -b">
-        <file name="fin-myv.autobil.bin"/>
-      </program>
-      <program name="apertium-transfer -b">
+      <program name="apertium-transfer">
         <file name="apertium-myv-fin.fin-myv.t1x"/>
         <file name="fin-myv.t1x.bin"/>
+        <file name="fin-myv.autobil.bin"/>
       </program>
-      <program name="apertium-interchunk">
+      <program name="apertium-interchunk -t">
         <file name="apertium-myv-fin.fin-myv.t2x"/>
         <file name="fin-myv.t2x.bin"/>
       </program>
@@ -425,18 +753,21 @@
 
   <mode name="fin-myv-postchunk" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="fin-myv.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="fin-myv.rlx.bin"/>
+        <file name="fin-myv.mor.rlx.bin"/>
       </program>
-      <program name="apertium-tagger -g $2">
-        <file name="fin-myv.prob"/>
+      <program name="cg-proc -n -1 -w">
+        <file name="fin-myv.syn.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="fin-myv.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="fin-myv.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
         <file name="apertium-myv-fin.fin-myv.t1x"/>
@@ -453,9 +784,284 @@
     </pipeline>
   </mode>
 
+  <mode name="fin-myv-dgen">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="fin-myv.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-myv.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -n -1 -w">
+        <file name="fin-myv.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-myv.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="fin-myv.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-myv-fin.fin-myv.t1x"/>
+        <file name="fin-myv.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-myv-fin.fin-myv.t2x"/>
+        <file name="fin-myv.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-myv-fin.fin-myv.t3x"/>
+        <file name="fin-myv.t3x.bin"/>
+      </program>
+      <program name="hfst-proc -d">
+        <file name="fin-myv.autogen.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
 
+
+  <!-- untrimmed fin-myv, for debug: -->
+  <mode name="ufin-myv" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="fin-myv.automorf-untrimmed.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-myv.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -n -1 -w">
+        <file name="fin-myv.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-myv.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="fin-myv.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-myv-fin.fin-myv.t1x"/>
+        <file name="fin-myv.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-myv-fin.fin-myv.t2x"/>
+        <file name="fin-myv.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-myv-fin.fin-myv.t3x"/>
+        <file name="fin-myv.t3x.bin"/>
+      </program>
+      <program name="hfst-proc $1">
+        <file name="fin-myv.autogen.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+
+  <mode name="ufin-myv-morph" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="fin-myv.automorf-untrimmed.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="ufin-myv-disam" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="fin-myv.automorf-untrimmed.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-myv.mor.rlx.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="ufin-myv-syntax" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="fin-myv.automorf-untrimmed.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-myv.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-myv.syn.rlx.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="ufin-myv-tagger" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="fin-myv.automorf-untrimmed.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-myv.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-myv.syn.rlx.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="ufin-myv-biltrans" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="fin-myv.automorf-untrimmed.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-myv.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -n -1 -w">
+        <file name="fin-myv.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-myv.autobil.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="ufin-myv-lextor" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="fin-myv.automorf-untrimmed.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-myv.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -n -1 -w">
+        <file name="fin-myv.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-myv.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m -t">
+        <file name="fin-myv.autolex.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="ufin-myv-chunker" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="fin-myv.automorf-untrimmed.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-myv.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -n -1 -w">
+        <file name="fin-myv.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-myv.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="fin-myv.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -t -b">
+        <file name="apertium-myv-fin.fin-myv.t1x"/>
+        <file name="fin-myv.t1x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="ufin-myv-interchunk" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="fin-myv.automorf-untrimmed.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-myv.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -n -1 -w">
+        <file name="fin-myv.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="apertium-transfer">
+        <file name="apertium-myv-fin.fin-myv.t1x"/>
+        <file name="fin-myv.t1x.bin"/>
+        <file name="fin-myv.autobil.bin"/>
+      </program>
+      <program name="apertium-interchunk -t">
+        <file name="apertium-myv-fin.fin-myv.t2x"/>
+        <file name="fin-myv.t2x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="ufin-myv-postchunk" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="fin-myv.automorf-untrimmed.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-myv.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -n -1 -w">
+        <file name="fin-myv.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-myv.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="fin-myv.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-myv-fin.fin-myv.t1x"/>
+        <file name="fin-myv.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-myv-fin.fin-myv.t2x"/>
+        <file name="fin-myv.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-myv-fin.fin-myv.t3x"/>
+        <file name="fin-myv.t3x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="ufin-myv-dgen">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="fin-myv.automorf-untrimmed.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-myv.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -n -1 -w">
+        <file name="fin-myv.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-myv.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="fin-myv.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-myv-fin.fin-myv.t1x"/>
+        <file name="fin-myv.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-myv-fin.fin-myv.t2x"/>
+        <file name="fin-myv.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-myv-fin.fin-myv.t3x"/>
+        <file name="fin-myv.t3x.bin"/>
+      </program>
+      <program name="hfst-proc -d">
+        <file name="fin-myv.autogen.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
 
 
 </modes>
-
-
