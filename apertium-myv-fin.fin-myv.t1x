@@ -49,7 +49,7 @@
   </section-def-cats>
 
   <section-def-attrs>
-    <def-attr n="a_cas">
+    <def-attr n="a_case">
       <attr-item tags="abe"/>
       <attr-item tags="abl"/>
       <attr-item tags="com"/>
@@ -64,8 +64,9 @@
       <attr-item tags="lat"/>
       <attr-item tags="loc"/>
       <attr-item tags="nom"/>
-      <attr-item tags="temp"/>
+      <attr-item tags="par"/>
       <attr-item tags="prl"/>
+      <attr-item tags="temp"/>
       <attr-item tags="tra"/>
     </def-attr>
     <def-attr n="a_mood">
@@ -77,11 +78,6 @@
       <attr-item tags="indic"/>
       <attr-item tags="opt"/>
       <attr-item tags="prec"/>
-    </def-attr>
-    <def-attr n="nbr">
-      <attr-item tags="sg"/>
-      <attr-item tags="pl"/>
-      <attr-item tags="sp"/>
     </def-attr>
     <def-attr n="a_number">
       <attr-item tags="sg"/>
@@ -95,32 +91,6 @@
       <attr-item tags="o_pl1"/>
       <attr-item tags="o_pl2"/>
       <attr-item tags="o_pl3"/>
-    </def-attr>
-    <def-attr n="a_sbj-pers">
-      <attr-item tags="s_p1"/>
-      <attr-item tags="s_p2"/>
-      <attr-item tags="s_p3"/>
-      <attr-item tags="a_p1"/>
-      <attr-item tags="a_p2"/>
-      <attr-item tags="a_p3"/>
-    </def-attr>
-    <def-attr n="a_sbj-nbr">
-      <attr-item tags="s_sg"/>
-      <attr-item tags="s_pl"/>
-      <attr-item tags="s_sp"/>
-      <attr-item tags="a_sg"/>
-      <attr-item tags="a_pl"/>
-      <attr-item tags="a_sp"/>
-    </def-attr>
-    <def-attr n="a_obj-pers">
-      <attr-item tags="o_p1"/>
-      <attr-item tags="o_p2"/>
-      <attr-item tags="o_p3"/>
-    </def-attr>
-    <def-attr n="a_obj-nbr">
-      <attr-item tags="o_sg"/>
-      <attr-item tags="o_pl"/>
-      <attr-item tags="o_sp"/>
     </def-attr>
     <def-attr n="all_pers">
       <attr-item tags="impers"/>
@@ -505,13 +475,13 @@
       <attr-item tags="a_sg3"/>
       <attr-item tags="a_pl1"/>
       <attr-item tags="a_pl2"/>
-      <attr-item tags="a_pl3"/>                                                                         
+      <attr-item tags="a_pl3"/>
       <attr-item tags="o_sg1"/>
       <attr-item tags="o_sg2"/>
       <attr-item tags="o_sg3"/>
       <attr-item tags="o_pl1"/>
       <attr-item tags="o_pl2"/>
-      <attr-item tags="o_pl3"/>                                                                       
+      <attr-item tags="o_pl3"/>
     </def-attr>
     <def-attr n="a_verb">
       <attr-item tags="vblex"/>
@@ -519,8 +489,8 @@
       <attr-item tags="vaux"/>
       <attr-item tags="vbmod"/>
     </def-attr>
-
   </section-def-attrs>
+
   <section-def-vars>
     <def-var n="number"/>
     <def-var n="current_verb"/>
@@ -532,7 +502,9 @@
             <lit v=""/>
           </let>
     </def-macro>
+
   </section-def-macros>
+
   <section-rules>
 
     <rule comment="REGLA: DEFAULT">

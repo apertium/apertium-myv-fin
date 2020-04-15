@@ -4,6 +4,10 @@
     <def-cat n="default">
       <cat-item tags="*"/>
     </def-cat>
+   <def-cat n="n.ind">
+      <cat-item tags="n.*.*.ind.*"/>
+      <cat-item tags="np.*.*.ind.*"/>
+    </def-cat>
     <def-cat n="cop">
       <cat-item tags="cop.*"/>
     </def-cat>
@@ -49,7 +53,7 @@
   </section-def-cats>
 
   <section-def-attrs>
-    <def-attr n="a_cas">
+    <def-attr n="a_case">
       <attr-item tags="abe"/>
       <attr-item tags="abl"/>
       <attr-item tags="com"/>
@@ -64,8 +68,9 @@
       <attr-item tags="lat"/>
       <attr-item tags="loc"/>
       <attr-item tags="nom"/>
-      <attr-item tags="temp"/>
+      <attr-item tags="par"/>
       <attr-item tags="prl"/>
+      <attr-item tags="temp"/>
       <attr-item tags="tra"/>
     </def-attr>
     <def-attr n="a_mood">
@@ -77,11 +82,6 @@
       <attr-item tags="indic"/>
       <attr-item tags="opt"/>
       <attr-item tags="prec"/>
-    </def-attr>
-    <def-attr n="nbr">
-      <attr-item tags="sg"/>
-      <attr-item tags="pl"/>
-      <attr-item tags="sp"/>
     </def-attr>
     <def-attr n="a_number">
       <attr-item tags="sg"/>
@@ -95,32 +95,6 @@
       <attr-item tags="o_pl1"/>
       <attr-item tags="o_pl2"/>
       <attr-item tags="o_pl3"/>
-    </def-attr>
-    <def-attr n="a_sbj-pers">
-      <attr-item tags="s_p1"/>
-      <attr-item tags="s_p2"/>
-      <attr-item tags="s_p3"/>
-      <attr-item tags="a_p1"/>
-      <attr-item tags="a_p2"/>
-      <attr-item tags="a_p3"/>
-    </def-attr>
-    <def-attr n="a_sbj-nbr">
-      <attr-item tags="s_sg"/>
-      <attr-item tags="s_pl"/>
-      <attr-item tags="s_sp"/>
-      <attr-item tags="a_sg"/>
-      <attr-item tags="a_pl"/>
-      <attr-item tags="a_sp"/>
-    </def-attr>
-    <def-attr n="a_obj-pers">
-      <attr-item tags="o_p1"/>
-      <attr-item tags="o_p2"/>
-      <attr-item tags="o_p3"/>
-    </def-attr>
-    <def-attr n="a_obj-nbr">
-      <attr-item tags="o_sg"/>
-      <attr-item tags="o_pl"/>
-      <attr-item tags="o_sp"/>
     </def-attr>
     <def-attr n="all_pers">
       <attr-item tags="impers"/>
@@ -168,7 +142,7 @@
       <attr-item tags="ind"/>
       <attr-item tags="def"/>
     </def-attr>
-    <def-attr n="a_nom">
+    <def-attr n="a_noun">
       <attr-item tags="n"/>
     </def-attr>
     <def-attr n="a_num">
@@ -505,13 +479,13 @@
       <attr-item tags="a_sg3"/>
       <attr-item tags="a_pl1"/>
       <attr-item tags="a_pl2"/>
-      <attr-item tags="a_pl3"/>                                                                         
+      <attr-item tags="a_pl3"/>
       <attr-item tags="o_sg1"/>
       <attr-item tags="o_sg2"/>
       <attr-item tags="o_sg3"/>
       <attr-item tags="o_pl1"/>
       <attr-item tags="o_pl2"/>
-      <attr-item tags="o_pl3"/>                                                                       
+      <attr-item tags="o_pl3"/>
     </def-attr>
     <def-attr n="a_verb">
       <attr-item tags="vblex"/>
@@ -534,18 +508,7 @@
           </let>
     </def-macro>
 
-    <def-macro n="functionRM" npar="1">
-        <choose>
-          <when>
-            <test>
-              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v=""/></equal>
-            </test>
-            <let><clip pos="1" side="tl" part="a_func"/><lit-tag v=""/></let>
-          </when>
-	</choose>
-    </def-macro>
-
-    <def-macro n="px-transform1" npar="1">
+<!--    <def-macro n="px-transform1" npar="1">
         <choose>
           <when>
             <test>
@@ -585,9 +548,64 @@
           </when>
         </choose>
     </def-macro>
+-->
   </section-def-macros>
   <section-rules>
 
+ 
+        <rule comment="REGLA: Komi has no indefinite or definite">
+      <pattern>
+        <pattern-item n="n.ind"/>
+      </pattern>
+      <action>
+	<choose>
+	  <when>
+            <test>
+		<equal><clip pos="1" side="sl" part="a_number"/><lit-tag v="sp"/></equal>
+	    </test>
+            <let>
+              <clip pos="1" side="tl" part="a_number"/>
+              <lit-tag v="sg"/>
+            </let>
+          </when>
+	  <when>
+            <test>
+		<equal><clip pos="1" side="sl" part="a_number"/><lit-tag v="pl"/></equal>
+	    </test>
+            <let>
+              <clip pos="1" side="tl" part="a_number"/>
+              <lit-tag v="pl"/>
+            </let>
+          </when>
+	  <when>
+            <test>
+	      <equal><clip pos="1" side="sl" part="a_number"/><lit-tag v="sg"/></equal>
+	    </test>
+            <let>
+              <clip pos="1" side="tl" part="a_number"/>
+              <lit-tag v="sg"/>
+            </let>
+          </when>
+	  
+	</choose>
+        <out>
+          <chunk name="NmnIndef" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+	      <tag><lit-tag v="IND"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_noun"/>
+              <clip pos="1" side="tl" part="a_number"/>
+              <clip pos="1" side="tl" part="a_case"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+   
+<!--    
     <rule comment="REGLA: n prop">
       <pattern>
         <pattern-item n="n-prop"/>
@@ -621,21 +639,21 @@
         </call-macro>
         <choose><when>
         <test><and>
-          <equal><clip pos="1" side="sl" part="a_nb"/><lit-tag v="pl"/></equal>
-          <equal><clip pos="1" side="tl" part="a_nb"/><lit-tag v="ND"/></equal>
+          <equal><clip pos="1" side="sl" part="a_number"/><lit-tag v="pl"/></equal>
+          <equal><clip pos="1" side="tl" part="a_number"/><lit-tag v="ND"/></equal>
         </and></test>
         <let>
-          <clip pos="1" side="tl" part="a_nb"/>
+          <clip pos="1" side="tl" part="a_number"/>
           <lit-tag v="pl"/>
         </let>
         </when>
         <when>
         <test><and>
-          <not><equal><clip pos="1" side="sl" part="a_nb"/><lit-tag v="pl"/></equal></not>
-          <equal><clip pos="1" side="tl" part="a_nb"/><lit-tag v="ND"/></equal>
+          <not><equal><clip pos="1" side="sl" part="a_number"/><lit-tag v="pl"/></equal></not>
+          <equal><clip pos="1" side="tl" part="a_number"/><lit-tag v="ND"/></equal>
         </and></test>
         <let>
-          <clip pos="1" side="tl" part="a_nb"/>
+          <clip pos="1" side="tl" part="a_number"/>
           <lit-tag v="sg"/>
         </let>
         </when>
@@ -652,7 +670,7 @@
         </out>
       </action>
     </rule>
-
+-->
     <rule comment="REGLA: DEFAULT">
       <pattern>
         <pattern-item n="default"/>
@@ -706,9 +724,9 @@
 	  <when>
 	    <test><or><equal>
 		  <clip pos="1" side="sl" part="a_tense"/>
-		  <lit-tag v="prt1"/></equal>
+		  <lit-tag v="pret1"/></equal>
                 <equal><clip pos="1" side="sl" part="a_tense"/>
-                  <lit-tag v="prt2"/></equal></or></test>
+                  <lit-tag v="pret2"/></equal></or></test>
             <let>
 	      <clip pos="1" side="tl" part="a_tense"/>
 	      <lit-tag v="past"/>
@@ -720,7 +738,7 @@
           <when>
             <test><equal>
                   <clip pos="1" side="sl" part="all_pers"/>
-                  <lit-tag v="scpl3"/></equal>
+                  <lit-tag v="s_pl3"/></equal>
                 </test>
             <let>
               <clip pos="1" side="tl" part="all_pers"/>
@@ -757,11 +775,11 @@
 	  <lit v=""/>
 	</let>
 	<let>
-	  <clip pos="2" side="tl" part="a_cas"/>
+	  <clip pos="2" side="tl" part="a_case"/>
 	  <lit-tag v="par"/>
 	</let>
         <let>
-          <clip pos="2" side="tl" part="a_nb"/>
+          <clip pos="2" side="tl" part="a_number"/>
           <lit-tag v="sg"/>
         </let>
         <out>
