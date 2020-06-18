@@ -4,27 +4,29 @@
    <alphabet/>
 
    <sdefs>
-     <sdef n="n"        c="Noun"/>
-     <sdef n="np"      c="Proper noun"/>
+     <sdef n="adj"     c="Adjective"/>
+     <sdef n="adv"     c="Adverb"/>
      <sdef n="cnjcoo"   c="Conjunction"/>
      <sdef n="cnjsub"   c="Subjunction"/>
+     <sdef n="det"    c="Determiner"/>
+     <sdef n="ij"    c="Interjection"/>
+     <sdef n="n"        c="Noun"/>
+     <sdef n="np"      c="Proper noun"/>
+     <sdef n="pcle"     c="Particle"/>
      <sdef n="post"    c="Postposition"/>
      <sdef n="num"    c="Numeral"/>
-     <sdef n="ij"    c="Interjection"/>
-     <sdef n="det"    c="Determiner"/>
-     <sdef n="adj"     c="Adjective"/>
-     <sdef n="def"     c="Definite"/>
-     <sdef n="ind"     c="Indefinite"/>
-     <sdef n="qnt"     c="Quantifier"/>
      <sdef n="prn"     c="Pronouns"/>
      <sdef n="vblex"     c="Verb"/>
      <sdef n="aux"     c="Auxiliary"/>
+     <sdef n="adp"     c="Adposition"/>
+     <sdef n="cop"     c="Copula"/>
+
+     <sdef n="def"     c="Definite"/>
+     <sdef n="ind"     c="Indefinite"/>
+     <sdef n="qnt"     c="Quantifier"/>
+
      <sdef n="iv"     c="Intransitive"/>
      <sdef n="tv"     c="Transitive"/>
-     <sdef n="adp"     c="Adposition"/>
-     <sdef n="adv"     c="Adverb"/>
-     <sdef n="cop"     c="Copula"/>
-     <sdef n="pcle"     c="Particle"/>
      
      <sdef n="rel"      c="Relative"/>
      <sdef n="ref"     c="Reflexive"/>
@@ -74,12 +76,12 @@
      <sdef n="pl2"      c="Second-person plural"/>
      <sdef n="pl3"      c="Third-person plural"/>
 
-     <sdef n="pxsg1"    c="First-person singular possessive suffix"/>
-     <sdef n="pxsg2"    c="Second-person singular possessive suffix"/>
-     <sdef n="pxsg3"    c="Third-person singular possessive suffix"/>
-     <sdef n="pxpl1"    c="First-person plural possessive suffix"/>
-     <sdef n="pxpl2"    c="Second-person plural possessive suffix"/>
-     <sdef n="pxpl3"    c="Third-person plural possessive suffix"/>
+     <sdef n="px1sg"    c="First-person singular possessive suffix"/>
+     <sdef n="px2sg"    c="Second-person singular possessive suffix"/>
+     <sdef n="px3sg"    c="Third-person singular possessive suffix"/>
+     <sdef n="px1pl"    c="First-person plural possessive suffix"/>
+     <sdef n="px2pl"    c="Second-person plural possessive suffix"/>
+     <sdef n="px3pl"    c="Third-person plural possessive suffix"/>
      
      <sdef n="s_sg1"    c="First-person singular subject marker"/>
      <sdef n="s_sg2"    c="Second-person singular subject marker"/>
@@ -226,19 +228,23 @@
     <e><p><l>килей<s n="n"/></l><r>koivu<s n="n"/></r></p></e>
     <e><p><l>киска<s n="n"/></l><r>koira<s n="n"/></r></p></e>
     <e><p><l>ков<s n="n"/></l><r>kuu<s n="n"/></r></p></e>
-    <e><p><l>кувать<s n="adv"/></l><r>kauan<s n="adv"/></r></p></e>
-    <e><p><l>куватьс<s n="adv"/></l><r>kauan<s n="adv"/></r></p></e>
     <e><p><l>кудо<s n="n"/></l><r>koti<s n="n"/></r></p></e>
     <e><p><l>кудо<s n="n"/></l><r>talo<s n="n"/></r></p></e>
+    <e><p><l>чивалдо<s n="n"/></l><r>auringonvalo<s n="n"/></r></p></e>
+
+    <e><p><l>кувать<s n="adv"/></l><r>kauan<s n="adv"/></r></p></e>
+    <e><p><l>куватьс<s n="adv"/></l><r>kauan<s n="adv"/></r></p></e>
     <e><p><l>куроксто<s n="adv"/></l><r>pian<s n="adv"/></r></p></e>
+
     <e><p><l>латкине<s n="n"/></l><r>kuoppa<s n="n"/></r></p></e>
     <e><p><l>левкс<s n="n"/></l><r>poikanen<s n="n"/></r></p></e>
     <e><p><l>левкс<s n="n"/></l><r>pentu<s n="n"/></r></p></e>
     <e><p><l>ловажа<s n="n"/></l><r>luu<s n="n"/></r></p></e>
     <e><p><l>мадемс<s n="vblex"/><s n="iv"/></l><r>mennä makuulle<s n="vblex"/></r></p></e>
     <e><p><l>менель<s n="n"/></l><r>taivas<s n="n"/></r></p></e>
-    <e><p><l>минь<s n="prn"/></l><r>me<s n="prn"/></r></p></e>
     <e><p><l>мода<s n="n"/></l><r>maa<s n="n"/></r></p></e>
+
+    <e><p><l>минь<s n="prn"/></l><r>me<s n="prn"/></r></p></e>
     <e><p><l>мон<s n="prn"/></l><r>minä<s n="prn"/></r></p></e>
     <e><p><l>муемс<s n="vblex"/><s n="tv"/></l><r>löytää<s n="vblex"/></r></p></e>
     <e><p><l>ниле<s n="num"/><s n="card"/></l><r>neljä<s n="num"/></r></p></e>
@@ -257,11 +263,14 @@
     <e><p><l>сон<s n="prn"/></l><r>hän<s n="prn"/></r></p></e>
     <e><p><l>сон<s n="prn"/></l><r>se<s n="prn"/></r></p></e>
     <e><p><l>сынь<s n="prn"/></l><r>he<s n="prn"/></r></p></e>
+    <e><p><l>тон<s n="prn"/></l><r>sinä<s n="prn"/></r></p></e>
+    <e><p><l>тынь<s n="prn"/></l><r>te<s n="prn"/></r></p></e>
+    <e><p><l>эсь<s n="prn"/><s n="ref"/></l><r>itse<s n="adj"/></r></p></e>
+
     <e><p><l>теемс<s n="vblex"/><s n="tv"/></l><r>tehdä<s n="vblex"/></r></p></e>
     <e><p><l>теште<s n="n"/></l><r>tähti<s n="n"/></r></p></e>
     <e><p><l>тозонь<s n="adv"/></l><r>siihen<s n="adv"/></r></p></e>
-    <e><p><l>тон<s n="prn"/></l><r>sinä<s n="prn"/></r></p></e>
-    <e><p><l>тынь<s n="prn"/></l><r>te<s n="prn"/></r></p></e>
+
     <e><p><l>удомс<s n="vblex"/><s n="iv"/></l><r>nukkua<s n="vblex"/></r></p></e>
     <e><p><l>улемс<s n="vblex"/><s n="iv"/></l><r>olla<s n="vblex"/></r></p></e>
     <e><p><l>ульнемс<s n="vblex"/><s n="iv"/></l><r>olla<s n="vblex"/></r></p></e>
@@ -274,7 +283,6 @@
     <e><p><l>чи<s n="n"/></l><r>päivä<s n="n"/></r></p></e>
     <e><p><l>шка<s n="n"/></l><r>aika<s n="n"/></r></p></e>
     <e><p><l>эсь<s n="det"/></l><r>oma<s n="adj"/></r></p></e>
-    <e><p><l>эсь<s n="prn"/><s n="ref"/></l><r>itse<s n="adj"/></r></p></e>
     <e><p><l>эчке<s n="adj"/></l><r>paksu<s n="adj"/></r></p></e>
     <e><p><l>якамс<s n="vblex"/><s n="iv"/></l><r>kävellä<s n="vblex"/></r></p></e>
 
@@ -403,6 +411,7 @@
     <e><p><l>нолштамс<s n="vblex"/><s n="tv"/></l><r>nuolaista<s n="vblex"/></r></p></e>
     <e><p><l>нурькине<s n="adj"/></l><r>lyhyt<s n="adj"/></r></p></e>
     <e><p><l>од<s n="adj"/></l><r>uusi<s n="adj"/></r></p></e>
+    <e><p><l>ожо<s n="adj"/></l><r>keltainen<s n="adj"/></r></p></e>
     <e><p><l>ой<s n="n"/></l><r>voi<s n="n"/></r></p></e>
     <e><p><l>ойме<s n="n"/></l><r>henki<s n="n"/></r></p></e>
     <e><p><l>олго<s n="n"/></l><r>olki<s n="n"/></r></p></e>
@@ -419,7 +428,7 @@
     <e><p><l>пене<s n="n"/></l><r>pätkä<s n="n"/></r></p></e>
     <e><p><l>пертьпеле<s n="adv"/></l><r>ympärillä<s n="adv"/></r></p></e>
     <e><p><l>перька<s n="adp"/></l><r>ympäri<s n="post"/></r></p></e>
-    <e><p><l>пешксе<s n="adj"/></l><r>täynnä oleva<s n="adj"/></r></p></e>
+    <e><p><l>пешксе<s n="adj"/></l><r>täynnä<b/>oleva<s n="adj"/></r></p></e>
     <e><p><l>пизёл<s n="n"/></l><r>pihlajanmarja<s n="n"/></r></p></e>
 <e><p><l>пизёлкс<s n="n"/></l><r>pihlaja<s n="n"/></r></p></e>
     <e><p><l>пиле<s n="n"/></l><r>korva<s n="n"/></r></p></e>
@@ -428,7 +437,7 @@
     <e><p><l>порнемс<s n="vblex"/><s n="tv"/></l><r>pureskella<s n="vblex"/></r></p></e>
     <e><p><l>промомс<s n="vblex"/><s n="iv"/></l><r>kokoontua<s n="vblex"/></r></p></e>
     <e><p><l>пря<s n="n"/></l><r>pää<s n="n"/></r></p></e>
-    <e><p><l>прянек-пильгенек<s n="adv"/></l><r>päineen jalkoineen<s n="adv"/></r></p></e>
+    <e><p><l>прянек-пильгенек<s n="adv"/></l><r>kokonaan<s n="adv"/></r></p></e>
     <e><p><l>пуло<s n="n"/></l><r>häntä<s n="n"/></r></p></e>
     <e><p><l>пшти<s n="adj"/></l><r>terävä<s n="adj"/></r></p></e>
     <e><p><l>пштилгавтомс<s n="vblex"/><s n="tv"/></l><r>teroittaa<s n="vblex"/></r></p></e>
@@ -441,10 +450,11 @@
     <e><p><l>сельме<s n="n"/></l><r>silmä<s n="n"/></r></p></e>
     <e><p><l>сестэ<s n="adv"/></l><r>silloin<s n="adv"/></r></p></e>
     <e><p><l>симдемс<s n="vblex"/><s n="tv"/></l><r>imettää<s n="vblex"/></r></p></e>
-    <e><p><l>совамс<s n="vblex"/><s n="iv"/></l><r>mennä sisään<s n="vblex"/></r></p></e>
+    <e><p><l>совамс<s n="vblex"/><s n="iv"/></l><r>mennä<b/>sisään<s n="vblex"/></r></p></e>
     <e><p><l>содамс<s n="vblex"/><s n="tv"/></l><r>tietää<s n="vblex"/></r></p></e>
+    <e><p><l>сокоргавтомс<s n="vblex"/><s n="tv"/></l><r>häikäistä<s n="vblex"/></r></p></e>
     <e><p><l>стакасто<s n="adv"/></l><r>raskaasti<s n="adv"/></r></p></e>
-    <e><p><l>стямс<s n="vblex"/><s n="iv"/></l><r>nousta seisomaan<s n="vblex"/></r></p></e>
+    <e><p><l>стямс<s n="vblex"/><s n="iv"/></l><r>nousta<b/>seisomaan<s n="vblex"/></r></p></e>
     <e><p><l>судо<s n="n"/></l><r>nenä<s n="n"/></r></p></e>
     <e><p><l>сур<s n="n"/></l><r>sormi<s n="n"/></r></p></e>
     <e><p><l>сускомс<s n="vblex"/><s n="tv"/></l><r>purra<s n="vblex"/></r></p></e>

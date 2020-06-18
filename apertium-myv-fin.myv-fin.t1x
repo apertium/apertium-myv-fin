@@ -29,12 +29,12 @@
       <cat-item tags="num.card"/>
     </def-cat>
     <def-cat n="n.possa">
-      <cat-item tags="n.*.*.pxsg1.*"/>
-      <cat-item tags="n.*.*.pxsg2.*"/>
-      <cat-item tags="n.*.*.pxsg3.*"/>
-      <cat-item tags="n.*.*.pxpl1.*"/>
-      <cat-item tags="n.*.*.pxpl2.*"/>
-      <cat-item tags="n.*.*.pxpl3.*"/>
+      <cat-item tags="n.*.*.px1sg.*"/>
+      <cat-item tags="n.*.*.px2sg.*"/>
+      <cat-item tags="n.*.*.px3sg.*"/>
+      <cat-item tags="n.*.*.px1pl.*"/>
+      <cat-item tags="n.*.*.px2pl.*"/>
+      <cat-item tags="n.*.*.px3pl.*"/>
     </def-cat>
     <def-cat n="prpers">
       <cat-item tags="prn.*"/>
@@ -124,21 +124,14 @@
       <attr-item tags="px1pl"/>
       <attr-item tags="px2pl"/>
       <attr-item tags="px3pl"/>
-
-      <attr-item tags="pxsg1"/>
-      <attr-item tags="pxsg2"/>
-      <attr-item tags="pxsg3"/>
-      <attr-item tags="pxpl1"/>
-      <attr-item tags="pxpl2"/>
-      <attr-item tags="pxpl3"/>
     </def-attr>
     <def-attr n="a_definiteness">
-      <attr-item tags="pxsg1"/>
-      <attr-item tags="pxsg2"/>
-      <attr-item tags="pxsg3"/>
-      <attr-item tags="pxpl1"/>
-      <attr-item tags="pxpl2"/>
-      <attr-item tags="pxpl3"/>
+      <attr-item tags="px1sg"/>
+      <attr-item tags="px2sg"/>
+      <attr-item tags="px3sg"/>
+      <attr-item tags="px1pl"/>
+      <attr-item tags="px2pl"/>
+      <attr-item tags="px3pl"/>
       <attr-item tags="ind"/>
       <attr-item tags="def"/>
     </def-attr>
@@ -508,7 +501,7 @@
           </let>
     </def-macro>
 
-<!--    <def-macro n="px-transform1" npar="1">
+<!-- Depricated    <def-macro n="px-transform1" npar="1">
         <choose>
           <when>
             <test>
@@ -553,7 +546,7 @@
   <section-rules>
 
  
-        <rule comment="REGLA: Komi has no indefinite or definite">
+        <rule comment="REGLA: Finnish has no indefinite or definite">
       <pattern>
         <pattern-item n="n.ind"/>
       </pattern>
@@ -729,12 +722,63 @@
                   <lit-tag v="pret2"/></equal></or></test>
             <let>
 	      <clip pos="1" side="tl" part="a_tense"/>
-	      <lit-tag v="past"/>
+	      <lit-tag v="pret"/>
             </let>
 	  </when>
 	  </choose>
 
         <choose>
+          <when>
+            <test><equal>
+                  <clip pos="1" side="sl" part="all_pers"/>
+                  <lit-tag v="s_sg1"/></equal>
+                </test>
+            <let>
+              <clip pos="1" side="tl" part="all_pers"/>
+              <lit-tag v="p1.sg"/>
+            </let>
+          </when>
+          <when>
+            <test><equal>
+                  <clip pos="1" side="sl" part="all_pers"/>
+                  <lit-tag v="s_sg2"/></equal>
+                </test>
+            <let>
+              <clip pos="1" side="tl" part="all_pers"/>
+              <lit-tag v="p2.sg"/>
+            </let>
+          </when>
+          <when>
+            <test><equal>
+                  <clip pos="1" side="sl" part="all_pers"/>
+                  <lit-tag v="s_sg3"/></equal>
+                </test>
+            <let>
+              <clip pos="1" side="tl" part="all_pers"/>
+              <lit-tag v="p3.sg"/>
+            </let>
+          </when>
+
+          <when>
+            <test><equal>
+                  <clip pos="1" side="sl" part="all_pers"/>
+                  <lit-tag v="s_pl1"/></equal>
+                </test>
+            <let>
+              <clip pos="1" side="tl" part="all_pers"/>
+              <lit-tag v="p1.pl"/>
+            </let>
+          </when>
+          <when>
+            <test><equal>
+                  <clip pos="1" side="sl" part="all_pers"/>
+                  <lit-tag v="s_pl2"/></equal>
+                </test>
+            <let>
+              <clip pos="1" side="tl" part="all_pers"/>
+              <lit-tag v="p2.pl"/>
+            </let>
+          </when>
           <when>
             <test><equal>
                   <clip pos="1" side="sl" part="all_pers"/>
