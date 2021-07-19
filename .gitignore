@@ -22,3 +22,6 @@
 /*~
 /*-loc
 /*.pl
+/*.zhfst
+/.DS_Store
+/test/*-output.txt

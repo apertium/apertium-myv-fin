@@ -1,0 +1,10 @@
+{
+    "fin-myv": {
+        "input": "fin-myv-input.txt",
+        "mode": "fin-myv"
+    },
+    "myv-fin": {
+        "input": "myv-fin-input.txt",
+        "mode": "myv-fin"
+    }
+}
