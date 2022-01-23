@@ -221,7 +221,7 @@
     <e><p><l>ды<s n="cnjcoo"/></l><r>ja<s n="cnjcoo"/></r></p></e>
     <e><p><l>кармамс<s n="vblex"/><s n="iv"/></l><r>alkaa<s n="vblex"/></r></p></e>
     <e><p><l>казне<s n="n"/></l><r>lahja<s n="n"/></r></p></e>
-    <e><p><l>катка<s n="n"/></l><r>kissa<s n="n"/></r></p></e>
+    <e r="LR"><p><l>катка<s n="n"/></l><r>kissa<s n="n"/></r></p></e>
     <e><p><l>ки<s n="n"/></l><r>tie<s n="n"/></r></p></e>
     <e><p><l>кизэ<s n="n"/></l><r>kesä<s n="n"/></r></p></e>
     <e><p><l>кизэ<s n="n"/><s n="gen"/><s n="ind"/></l><r>kesäinen<s n="adj"/></r></p></e>
@@ -249,7 +249,7 @@
     <e><p><l>муемс<s n="vblex"/><s n="tv"/></l><r>löytää<s n="vblex"/></r></p></e>
     <e><p><l>ниле<s n="num"/><s n="card"/></l><r>neljä<s n="num"/></r></p></e>
     <e><p><l>овто<s n="n"/></l><r>karhu<s n="n"/></r></p></e>
-    <e><p><l>пине<s n="n"/></l><r>koira<s n="n"/></r></p></e>
+    <e r="LR"><p><l>пине<s n="n"/></l><r>koira<s n="n"/></r></p></e>
     <e><p><l>пизэ<s n="n"/></l><r>pesä<s n="n"/></r></p></e>
     <e><p><l>пой<s n="n"/></l><r>haapa<s n="n"/></r></p></e>
     <e><p><l>появамс<s n="vblex"/><s n="iv"/></l><r>ilmetä<s n="vblex"/></r></p></e>
@@ -277,7 +277,7 @@
     <e><p><l>укштор<s n="n"/></l><r>vahtera<s n="n"/></r></p></e>
     <e><p><l>ундо<s n="n"/></l><r>ontelo<s n="n"/></r></p></e>
     <e><p><l>ундо<s n="n"/></l><r>kolo<s n="n"/></r></p></e>
-    <e><p><l>чеерне<s n="n"/></l><r>hiiri<s n="n"/></r></p></e>
+    <e r="LR"><p><l>чеерне<s n="n"/></l><r>hiiri<s n="n"/></r></p></e>
     <e><p><l>чувомс<s n="vblex"/><s n="tv"/></l><r>kaivaa<s n="vblex"/></r></p></e>
     <e><p><l>чувто<s n="n"/></l><r>puu<s n="n"/></r></p></e>
     <e><p><l>чи<s n="n"/></l><r>päivä<s n="n"/></r></p></e>
@@ -313,7 +313,7 @@
     <e><p><l>токавтомс<s n="vblex"/><s n="tv"/></l><r>koskettaa<s n="vblex"/></r></p></e>
     <e><p><l>уемс<s n="vblex"/><s n="iv"/></l><r>uida<s n="vblex"/></r></p></e>
     <e><p><l>ужо<s n="n"/></l><r>kulma<s n="n"/></r></p></e>
-    <e><p><l>ужо<s n="ij"/></l><r>odottaa<s n="vblex"/><s n="imp"/><s n="p2"/><s n="sg"/></r></p></e>
+    <e><p><l>ужо<s n="vblex"/></l><r>odottaa<s n="vblex"/><s n="imp"/><s n="p2"/><s n="sg"/></r></p></e>
     <e><p><l>чарькодемс<s n="vblex"/><s n="tv"/></l><r>ymmärtää<s n="vblex"/></r></p></e>
     <e><p><l>чивалдо<s n="n"/></l><r>päivänvalo<s n="n"/></r></p></e>
     <e><p><l>эрьке<s n="n"/></l><r>järvi<s n="n"/></r></p></e>
