@@ -244,6 +244,7 @@
 
     <e><p><l>неть<s n="det"/></l><r>nämä<s n="det"/></r></p></e>
     <e><p><l>неть<s n="det"/></l><r>ne<s n="det"/></r></p></e>
+    <e><p><l>се<s n="det"/></l><r>tuo<s n="det"/></r></p></e>
     <e><p><l>те<s n="det"/></l><r>tämä<s n="det"/></r></p></e>
     <e><p><l>тона<s n="det"/></l><r>toinen<s n="det"/></r></p></e>
 
@@ -253,6 +254,8 @@
     <e><p><l>кона<s n="prn"/></l><r>joka<s n="prn"/></r></p></e>
     <e><p><l>кода<s n="prn"/></l><r>miten<s n="prn"/></r></p></e>
     <e><p><l>косо<s n="prn"/><s n="ine"/><s n="itg"/></l><r>missä<s n="prn"/></r></p></e>
+    <e><p><l>кие<s n="prn"/></l><r>kuka<s n="prn"/></r></p></e>
+    <e><p><l>кияк<s n="prn"/></l><r>kukaan<s n="prn"/></r></p></e>
     <e><p><l>мезе<s n="prn"/></l><r>mikä<s n="prn"/></r></p></e>
     <e><p><l>мекс<s n="prn"/></l><r>miksi<s n="prn"/></r></p></e>
     <e><p><l>минь<s n="prn"/></l><r>me<s n="prn"/></r></p></e>
@@ -270,16 +273,17 @@
     <!-- SECTION: Numerals -->
 
     <e><p><l>ве<s n="num"/></l><r>yksi<s n="num"/><s n="num"/></r></p></e>
-    <e><p><l>вейке<s n="qnt"/></l><r>yksi<s n="qnt"/></r></p></e>
-    <e><p><l>вете<s n="qnt"/></l><r>viisi<s n="qnt"/></r></p></e>
-    <e><p><l>вете<s n="num"/><s n="card"/></l><r>viisi<s n="num"/></r></p></e>
-    <e><p><l>кото<s n="num"/><s n="card"/></l><r>kuusi<s n="num"/></r></p></e>
-    <e><p><l>ниле<s n="num"/><s n="card"/></l><r>neljä<s n="num"/></r></p></e>
-    <e><p><l>кавто<s n="num"/><s n="card"/></l><r>kaksi<s n="num"/></r></p></e>
-    <e><p><l>колмо<s n="num"/><s n="card"/></l><r>kolme<s n="num"/></r></p></e>
-    <e><p><l>ламо<s n="qnt"/></l><r>paljon<s n="qnt"/></r></p></e>
-    <e><p><l>ниле<s n="qnt"/></l><r>neljä<s n="qnt"/></r></p></e>
-    <e><p><l>аламошка<s n="qnt"/></l><r>vähäsen<s n="qnt"/></r></p></e>
+    <e><p><l>вейке<s n="num"/><s n="card"/></l><r>yksi<s n="num"/><s n="card"/></r></p></e>
+    <e><p><l>вете<s n="num"/><s n="card"/></l><r>viisi<s n="num"/><s n="card"/></r></p></e>
+    <e><p><l>вейксэ<s n="num"/><s n="card"/></l><r>yhdeksän<s n="num"/><s n="card"/></r></p></e>
+    <e><p><l>кото<s n="num"/><s n="card"/></l><r>kuusi<s n="num"/><s n="card"/></r></p></e>
+    <e><p><l>ниле<s n="num"/><s n="card"/></l><r>neljä<s n="num"/><s n="card"/></r></p></e>
+    <e><p><l>кавто<s n="num"/><s n="card"/></l><r>kaksi<s n="num"/><s n="card"/></r></p></e>
+    <e><p><l>кавксо<s n="num"/><s n="card"/></l><r>kahdeksan<s n="num"/><s n="card"/></r></p></e>
+    <e><p><l>колмо<s n="num"/><s n="card"/></l><r>kolme<s n="num"/><s n="card"/></r></p></e>
+    <e><p><l>кемень<s n="num"/><s n="card"/></l><r>kymmenen<s n="num"/><s n="card"/></r></p></e>
+    <e><p><l>ламо<s n="adv"/></l><r>paljon<s n="adv"/></r></p></e>
+    <e><p><l>аламошка<s n="adv"/></l><r>vähäsen<s n="adv"/></r></p></e>
 
     
     <!-- Раздел: Имя Существительное SECTION: Nouns  -->
