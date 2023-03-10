@@ -167,6 +167,7 @@
      
      <sdef n="inf"     c="infinitive"/>
      <sdef n="pres"     c="Present"/>
+     <sdef n="pret"     c="Preterite"/>
      <sdef n="pret1"     c="First Preterite"/>
      <sdef n="pret2"     c="Second Preterite"/>
      <sdef n="prfprc"  c="Perfect participle"/>
@@ -405,6 +406,7 @@
     <e><p><l>вальма<s n="n"/></l><r>ikkuna<s n="n"/></r></p></e>
     <e><p><l>ведне<s n="n"/></l><r>vesi<s n="n"/></r></p></e>
     <e><p><l>виш<s n="n"/></l><r>speltti<s n="n"/></r></p></e>
+    <e><p><l>библиотека<s n="n"/></l><r>kirjasto<s n="n"/></r></p></e>
     <e><p><l>ие<s n="n"/></l><r>vuosi<s n="n"/></r></p></e>
     <e><p><l>кашторкс<s n="n"/></l><r>kahina<s n="n"/></r></p></e>
     <e><p><l>кевкстема<s n="n"/></l><r>kysymys<s n="n"/></r></p></e>
@@ -432,6 +434,7 @@
     <e><p><l>течи<s n="n"/></l><r>tämä<b/>päivä<s n="n"/></r></p></e>
     <e><p><l>ушо<s n="n"/></l><r>ulko<s n="n"/></r></p></e>
     <e><p><l>цёрынька<s n="n"/></l><r>poika<s n="n"/></r></p></e>
+    <e><p><l>цёра<s n="n"/></l><r>mies<s n="n"/></r></p></e>
     <e><p><l>эй<s n="n"/></l><r>jää<s n="n"/></r></p></e>
     <e><p><l>эйкакш<s n="n"/></l><r>lapsi<s n="n"/></r></p></e>
 

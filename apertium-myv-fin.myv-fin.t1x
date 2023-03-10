@@ -45,10 +45,18 @@
     <def-cat n="vrb">
       <cat-item tags="vblex.*"/>
     </def-cat> 
+    <def-cat n="verb_pret1">
+      <cat-item tags="vblex.*.pret1.*"/>
+    </def-cat> 
     <def-cat n="tense.v">
       <cat-item tags="vblex.*.*.pres.*"/>
       <cat-item tags="vblex.*.*.pret1.*"/>
       <cat-item tags="vblex.*.*.pret2.*"/>
+      <cat-item tags="vblex.*.*.pret.*"/>
+      <cat-item tags="vblex.*.pres.*"/>
+      <cat-item tags="vblex.*.pret1.*"/>
+      <cat-item tags="vblex.*.pret2.*"/>
+      <cat-item tags="vblex.*.pret.*"/>
     </def-cat>
   </section-def-cats>
 
@@ -408,6 +416,8 @@
       <attr-item tags="@-FMAINV"/>
       <attr-item tags="@\+FMAINV"/>
       <attr-item tags="@+FMAINV"/>
+      <attr-item tags="@+FMAINV"/>
+      <attr-item tags="@+FMAINV→"/>
       <attr-item tags="@-F←OBJ"/>
       <attr-item tags="@-FOBJ"/>
       <attr-item tags="@-FOBJ→"/>
@@ -457,6 +467,13 @@
     </def-attr>
     <def-attr n="temps">
       <attr-item tags="pres"/>
+      <attr-item tags="pret"/>
+      <attr-item tags="pret1"/>
+      <attr-item tags="pret2"/>
+    </def-attr>
+    <def-attr n="a_tense">
+      <attr-item tags="pres"/>
+      <attr-item tags="pret"/>
       <attr-item tags="pret1"/>
       <attr-item tags="pret2"/>
     </def-attr>
@@ -664,55 +681,17 @@
       </action>
     </rule>
 -->
-    <rule comment="REGLA: DEFAULT">
-      <pattern>
-        <pattern-item n="default"/>
-      </pattern>
-      <action>
-        <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let>
-<!--        <let><clip pos="1" side="tl" part="x_func"/><lit v=""/></let> -->
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
-        <out>
-          <chunk name="default" case="caseFirstWord">
-            <tags>
-              <tag><clip pos="1" side="sl" part="a_func"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
 
-    <rule comment="REGLA: SENT">
-      <pattern>
-        <pattern-item n="sent"/>
-      </pattern>
-      <action>
-        <out>
-          <chunk name="sent" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="SENT"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-    <rule comment="REGLA: PRETERITE 1 PREDICATION">
+    <rule comment="REGLA: PRETERITE 1 PREDICATION" c=" тусь : lähti">
       <pattern>
         <pattern-item n="tense.v"/>
       </pattern>
       <action>
-        <let>
-          <clip pos="1" side="tl" part="a_mood"/>
-          <lit v=""/>
-        </let>
-<!--
+<!--        <let>-->
+<!--          <clip pos="1" side="tl" part="a_mood"/>-->
+<!--          <lit v=""/>-->
+<!--        </let> -->
+
 	<choose>
 	  <when>
 	    <test><or><equal>
@@ -726,7 +705,7 @@
             </let>
 	  </when>
 	  </choose>
--->
+
         <choose>
           <when>
             <test><equal>
@@ -796,12 +775,17 @@
           <lit-tag v="vblex.actv"/>
         </let>
         <out>
-          <chunk name="sent" case="caseFirstWord">
+          <chunk name="verb_mood_tense_person" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="PRED"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="whole"/>
+              <clip pos="1" side="tl" part="lem"/> <!-- these are attribute values -->
+              <clip pos="1" side="tl" part="a_verb"/>
+	      <lit-tag v="actv"/>
+              <clip pos="1" side="tl" part="a_mood"/>
+              <clip pos="1" side="tl" part="a_tense"/>
+              <clip pos="1" side="tl" part="all_pers"/>
             </lu>
           </chunk>
         </out>
@@ -861,6 +845,46 @@
         </out>
       </action>
     </rule>
+
+        <rule comment="REGLA: DEFAULT">
+      <pattern>
+        <pattern-item n="default"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let>
+<!--        <let><clip pos="1" side="tl" part="x_func"/><lit v=""/></let> -->
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <out>
+          <chunk name="default" case="caseFirstWord">
+            <tags>
+              <tag><clip pos="1" side="sl" part="a_func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: SENT">
+      <pattern>
+        <pattern-item n="sent"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="sent" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SENT"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
   </section-rules>
 </transfer>
