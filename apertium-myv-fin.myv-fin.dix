@@ -173,8 +173,8 @@
      <sdef n="prfprc"  c="Perfect participle"/>
      <sdef n="prsprc"  c="Present participle"/>
      
-     <sdef n="cond"     c="Conditional"/>
-     <sdef n="conj"     c="Conditional"/>
+     <sdef n="cond"     c="Conditional, this marks the protasis _if_"/>
+     <sdef n="conj"     c="Conjunctive used in both main clause and subordinate clause"/>
      <sdef n="des"     c="Desiderative"/>
      <sdef n="imprt"   c="Imperative"/>
      <sdef n="imp"     c="Imperative"/>
