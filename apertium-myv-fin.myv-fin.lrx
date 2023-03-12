@@ -2,4 +2,52 @@
   <rule>
     <match lemma="пине" tags="n.*"><select lemma="koira" tags="n.*"/></match>
   </rule>
+  
+<!-- ава<n><sg><gen><px3pl>/nainen<n><sg><gen><px3pl>/äiti<n><sg><gen><px3pl> -->
+
+  <rule weight="0.2">
+  <or>
+    <match lemma="ава" tags="n.*.*.*.px1sg.*">
+      <select lemma="nainen" tags="n.*"/>
+    </match>
+    <match lemma="ава" tags="n.*.*.*.px2sg.*">
+      <select lemma="nainen" tags="n.*"/>
+    </match>
+    <match lemma="ава" tags="n.*.*.*.px3sg.*">
+      <select lemma="nainen" tags="n.*"/>
+    </match>
+    <match lemma="ава" tags="n.*.*.*.px1pl.*">
+      <select lemma="nainen" tags="n.*"/>
+    </match>
+    <match lemma="ава" tags="n.*.*.*.px2pl.*">
+      <select lemma="nainen" tags="n.*"/>
+    </match>
+    <match lemma="ава" tags="n.*.*.*.px3pl.*">
+      <select lemma="nainen" tags="n.*"/>
+    </match>
+  </or>
+  </rule>
+  <rule weight="0.9">
+  <or>
+	<match lemma="ава" tags="n.*.*.*.px1sg.*">
+	       <select lemma="äiti" tags="n.*"/>
+	</match>
+	<match lemma="ава" tags="n.*.*.*.px2sg.*">
+	<select lemma="äiti" tags="n.*"/>
+	</match>
+    <match lemma="ава" tags="n.*.*.*.px3sg.*">
+      <select lemma="äiti" tags="n.*"/>
+    </match>
+	<match lemma="ава" tags="n.*.*.*.px1pl.*">
+	       <select lemma="äiti" tags="n.*"/>
+	</match>
+	<match lemma="ава" tags="n.*.*.*.px2pl.*">
+	<select lemma="äiti" tags="n.*"/>
+	</match>
+    <match lemma="ава" tags="n.*.*.*.px3pl.*">
+      <select lemma="äiti" tags="n.*"/>
+    </match>
+ </or>
+  </rule>
+
 </rules>
