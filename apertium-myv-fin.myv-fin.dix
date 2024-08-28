@@ -417,7 +417,7 @@
     <e><p><l>кедь<s n="n"/></l><r>kesi<s n="n"/></r></p></e>
     <e><p><l>кортамо<s n="n"/></l><r>puhe<s n="n"/></r></p></e>
     <e><p><l>ловома<s n="n"/></l><r>luku<s n="n"/></r></p></e>
-    <e><p><l>март<s n="n"/></l><r>maaliskuu<s n="n"/></r></p></e>
+    <e r="LR"><p><l>март<s n="n"/></l><r>maaliskuu<s n="n"/></r></p></e>
     <e><p><l>мель<s n="n"/></l><r>mieli<s n="n"/></r></p></e>
     <e><p><l>налксема<s n="n"/></l><r>leikki<s n="n"/></r></p></e>
     <e><p><l>нармунь<s n="n"/></l><r>lintu<s n="n"/></r></p></e>
@@ -436,7 +436,10 @@
     <e><p><l>ушо<s n="n"/></l><r>ulko<s n="n"/></r></p></e>
     <e><p><l>цёрынька<s n="n"/></l><r>poika<s n="n"/></r></p></e>
     <e><p><l>цёра<s n="n"/></l><r>mies<s n="n"/></r></p></e>
+    <e><p><l>шабра<s n="n"/></l><r>naapuri<s n="n"/></r></p></e>
+    <e><p><l>школа<s n="n"/></l><r>koulu<s n="n"/></r></p></e>
     <e><p><l>эй<s n="n"/></l><r>jää<s n="n"/></r></p></e>
+    <e><p><l>эйзюрков<s n="n"/></l><r>maaliskuu<s n="n"/></r></p></e>
     <e><p><l>эйкакш<s n="n"/></l><r>lapsi<s n="n"/></r></p></e>
 
     
@@ -645,7 +648,7 @@
     <e><p><l>чувомс<s n="vblex"/></l><r>kaivaa<s n="vblex"/></r></p></e>
     <e><p><l>шнамс<s n="vblex"/></l><r>kehua<s n="vblex"/></r></p></e>
     <e><p><l>ютамс<s n="vblex"/></l><r>kulkea<b/>ohi<s n="vblex"/></r></p></e>
-    <e><p><l>якамс<s n="vblex"/></l><r>kävellä<s n="vblex"/></r></p></e>
+    <e><p><l>якамс<s n="vblex"/></l><r>käydä<s n="vblex"/></r></p></e>
     <e><p><l>ярсамс<s n="vblex"/></l><r>syödä<s n="vblex"/></r></p></e>
 
 
